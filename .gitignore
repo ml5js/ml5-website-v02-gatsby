@@ -1,1 +1,11 @@
+# folder
+node_modules/
+.cache/
+.vscode/
+public/
+archive/
+other/
+__test__/
+
+# files
 .DS_Store
