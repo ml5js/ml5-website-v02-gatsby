@@ -1,0 +1,31 @@
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 2rem;
+}
+
+.menu {
+  display: flex;
+  margin-right: 2rem;
+}
+
+.menu a {
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.menu a:first-child {
+  margin-left: 0;
+}
+
+/* Please view the "Header.js" file if you plan to adjust the transition by scrolling. */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}

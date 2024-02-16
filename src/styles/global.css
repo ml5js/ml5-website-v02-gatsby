@@ -1,0 +1,161 @@
+@import url(https://fonts.googleapis.com/css?family=Arvo:wght@700&Lato:300,400,700&Nunito+Sans:ital,wght@0,400;0,700;1,400;1,700);
+
+/* 
+Possible fonts to use:
+  Arvo
+  Nunito / Nunito Sans:
+  Lato
+  Montserrat
+  Poppins
+
+Colors:
+Primary: 9047FF to 6E34E9 (AA checked)
+Secondary: 7d77da
+
+14c8c7;
+
+green:
+90c819
+00ee88
+
+Good BG Colors:
+  #f4f7ff -- blue-ish
+*/
+
+
+:root {
+  --color-primary: #8833ff;
+  --color-secondary: #7d77da;
+  --color-tertiary: #00cd75;
+  --color-transparent: rgb(255, 255, 255, 0.0);
+
+  --color-text: #282a3f;
+  --color-text-dark: #1f1f20;
+  --color-text-light: #73768d;
+
+  --color-bg: #ffffff;
+  --color-bg-light: #f8f9fb;
+  --color-bg-gray: #f5f5f5;
+
+  --link-color: var(--color-secondary);
+  --link-hover-color: var(--color-primary);
+  --link-hover-bg-color: var(--color-transparent);
+
+  --font-serif: "Arvo", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans-serif: "Nunito Sans", system-ui, -apple-system, "Helvetica", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-monospace: "Noto Sans Mono", "Courier New", monospace;
+
+  --body-color: var(--color-text);
+  --body-font-family: var(--font-sans-serif);
+  --body-font-size: 16px;
+  --body-font-weight: 400;
+  --body-line-height: 1.6;
+
+  --heading-color: var(--color-text-dark);
+  --heading-font-family: var(--font-serif);
+  --heading-small-font-family: var(--font-sans-serif);
+  --heading-font-weight: 700;
+
+  --button-font-family: "Arvo", sans-serif;
+  --button-font-weight: 700;
+  --button-hover-color: #ffffff;
+  --button-hover-bg-color: var(--color-primary);
+
+  --navbar-init-height: 6rem;
+}
+
+html,
+body {
+  font-size: var(--body-font-size);
+  font-family: var(--body-font-family);
+  line-height: var(--body-line-height);
+  word-spacing: 1px;
+  color: var(--body-color);
+  /* background-color: var(--color-bg); */
+  background: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight);
+}
+
+h4,
+h5,
+h6 {
+  font-family: var(--heading-small-font-family);
+  font-weight: var(--heading-font-weight);
+}
+
+h1 {
+  font-size: 2.3rem;
+  margin: 2rem 0 1.5rem 0;
+}
+
+h2 {
+  font-size: 1.7rem;
+  color: var(--color-secondary);
+  margin: 1rem 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1.0rem;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+div {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  background-color: var(--link-hover-bg-color);
+}
+
+/* blink for ScrollDownIndicator */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
