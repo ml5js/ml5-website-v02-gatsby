@@ -60,7 +60,7 @@ const Header = () => {
           />
           <Button
             children="Reference"
-            url="https://ml5js.github.io/ml5-website-v02-docsify/#/reference/overview"
+            url="/reference"
             txtColor="var(--color-text-dark)"
             bgColor="var(--color-transparent)"
             fontSize="0.9rem"
