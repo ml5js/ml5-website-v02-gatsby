@@ -53,14 +53,14 @@ const Header = () => {
         <div className={menu}>
           <Button
             children="Getting Started"
-            url="https://ml5js.github.io/ml5-website-v02-docsify/#/"
+            url="https://ml5-next-gen-docs.netlify.app/#/"
             txtColor="var(--color-text-dark)"
             bgColor="var(--color-transparent)"
             fontSize="0.9rem"
           />
           <Button
             children="Reference"
-            url="https://ml5js.github.io/ml5-website-v02-docsify/#/reference/overview"
+            url="https://ml5-next-gen-docs.netlify.app/#/reference/overview"
             txtColor="var(--color-text-dark)"
             bgColor="var(--color-transparent)"
             fontSize="0.9rem"

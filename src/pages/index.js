@@ -78,7 +78,10 @@ const IndexPage = ({ data }) => {
         <h2>
           Discover the creative possibilities of machine learning!
         </h2>
-        <div style={styles.flexContainer}>
+        <p>
+          Coming soon!
+        </p>
+        {/* <div style={styles.flexContainer}>
           {posts.map((post) => (
             // <div key={post.id}></div>
             <ProjectBox
@@ -88,7 +91,7 @@ const IndexPage = ({ data }) => {
               bgColor="var(--color-bg-light)"
             />
           ))}
-        </div>
+        </div> */}
       </section>
     </Layout>
   )

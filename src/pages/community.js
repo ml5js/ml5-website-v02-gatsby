@@ -37,7 +37,10 @@ const CommunityPage = ({ data }) => {
       <Spacer height="2rem" />
 
       <h2>Community Events</h2>
-      <div style={styles.postContainer}>
+      <p>
+        Coming soon!
+      </p>
+      {/* <div style={styles.postContainer}>
         {events.map((event) => (
           <div key={event.id}>
             <TextBox
@@ -48,12 +51,14 @@ const CommunityPage = ({ data }) => {
             />
           </div>
         ))}
-      </div>
+      </div> */}
       <Spacer />
 
       <h2>Featured Projects</h2>
-      {/* Test */}
-      <div style={styles.postContainer}>
+      <p>
+        Coming soon!
+      </p>
+      {/* <div style={styles.postContainer}>
         {posts.map((post) => (
           // <div key={post.id}></div>
           <ProjectBox
@@ -61,7 +66,7 @@ const CommunityPage = ({ data }) => {
             description={post.frontmatter.author}
           />
         ))}
-      </div>
+      </div> */}
       <Spacer height="2rem" />
 
       <h2>Contribute!</h2>

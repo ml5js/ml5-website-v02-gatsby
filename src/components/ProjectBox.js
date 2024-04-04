@@ -2,10 +2,10 @@ import React from "react";
 
 const ProjectBox = ({ title, description, width, bgColor }) => {
   const colorPalette = [
-    "#EEFF33",
-    "#15F5BA",
-    "#AA99FF",
-    "#A6F6FF"
+    "#f8f9fb",
+    "#f8f9fb",
+    "#f8f9fb",
+    "#f8f9fb"
   ];
   const getColor = () => {
     const randomIndex = Math.floor(Math.random() * colorPalette.length);
