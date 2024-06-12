@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const IframeComponent = () => {
+  const [iframeSrc, setIframeSrc] = useState('');
   const styles = {
     container: {
-      width: "100%",
+      width: "100vw",
       height: "22rem",
       overflow: "hidden",
     },
@@ -14,10 +15,14 @@ const IframeComponent = () => {
     },
   };
 
+  useEffect(() => {
+    setIframeSrc('https://moqn.github.io/ml5-website-hero/sketch/?reload=true'); // Set your iframe URL here
+  }, []); // Empty dependency array to ensure this runs only once on mount
+
   return (
     <div style={styles.container}>
       <iframe
-        src="https://moqn.github.io/ml5-website-hero/sketch/"
+        src={iframeSrc}
         title="Hero Sketch"
         style={styles.iframe}
         allowFullScreen
