@@ -4,12 +4,16 @@ const IframeComponent = () => {
   const [iframeSrc, setIframeSrc] = useState('');
   const styles = {
     container: {
-      width: "100vw",
+      width: "100%",
       height: "22rem",
+	  display: "flex",
+      justifyContent: "center", // Center iframe horizontally
+      alignItems: "center", // Center iframe vertically
       overflow: "hidden",
     },
     iframe: {
       width: "100%",
+	  maxWidth: '800px', // Max width 800px
       height: "100%",
       border: "none",
     },
