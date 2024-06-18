@@ -102,7 +102,7 @@ const AboutPage = () => {
       <p>
         Website designed with ❤ by Milan Gary, Nicole Lloyd, and Arnab Chakravarty. Developed using
         React/Gatsby.js and Netlify by Wenqi Li, Joey Lee, and Dan Shiffman. Shout out to the
-        OpenMoji Project for glyphs.
+        OpenMoji Project for glyphs. (This is a trivial test change, will work more on this later.)
       </p>
       <Spacer />
     </Layout>
