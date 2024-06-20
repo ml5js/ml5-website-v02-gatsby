@@ -12,19 +12,33 @@ const AboutPage = () => {
       <p>
         Welcome to the ml5.js project! ml5.js is an open source library with a goal of making
         machine learning approachable for a broad audience of artists, creative coders, and
-        students. Drawing inspiration from [Processing](https://processing.org) and
-        [p5.js](https://p5js.org/), ml5.js aims to bridge the gap between the technical complexity
-        of machine learning and the creativity of beginners and artists. The library provides access
-        to machine learning algorithms and models in the browser, building on top of TensorFlow.js.
+        students. Drawing inspiration from{' '}
+        <a href="https://processing.org" target="_blank">
+          Processing
+        </a>{' '}
+        and{' '}
+        <a href="https://p5js.org" target="_blank">
+          p5.js
+        </a>
+        , ml5.js aims to bridge the gap between the technical complexity of machine learning and the
+        creativity of beginners and artists. The library provides access to machine learning
+        algorithms and models in the browser, building on top of TensorFlow.js.
       </p>
       <p>
-        The project began as a collaborative effort at [NYU's ITP
-        program](https://tisch.nyu.edu/itp), involving contributions from students, researchers,
-        faculty, and alumni. Inspired by the p5.js project's focus on making coding accessible and
-        inclusive, ml5.js aims to expand this mission to the domain of machine learning. Initial
-        work on the project was supported by a [Google Research
-        Award](https://www.nyu.edu/about/news-publications/news/2018/january/itp-professor-daniel-shiffman-granted-google-faculty-research-aw.html).
-        which helped to formalize the relationship between TensorFlow.js and ml5.js.
+        The project began as a collaborative effort at{' '}
+        <a href="https://tisch.nyu.edu/itp" target="_blank">
+          NYU's ITP program
+        </a>
+        , involving contributions from students, researchers, faculty, and alumni. Inspired by the
+        p5.js project's focus on making coding accessible and inclusive, ml5.js aims to expand this
+        mission to the domain of machine learning. Initial work on the project was supported by a{' '}
+        <a
+          href="https://www.nyu.edu/about/news-publications/news/2018/january/itp-professor-daniel-shiffman-granted-google-faculty-research-aw.html"
+          target="_blank"
+        >
+          Google Research Award
+        </a>
+        , which helped to formalize the relationship between TensorFlow.js and ml5.js.
       </p>
       <p>
         A key feature of ml5.js is its ability to run pretrained models for interaction. These
@@ -39,9 +53,11 @@ const AboutPage = () => {
         and we're glad you're here!
       </p>
       <p>
-        ml5.js is heavily inspired by the work of [The Processing
-        Foundation](https://processingfoundation.org/). Learn more about the history and origins of
-        the ml5.js project in the{' '}
+        ml5.js is heavily inspired by the work of{' '}
+        <a href="https://processingfoundation.org/" target="_blank">
+          The Processing Foundation
+        </a>
+        . Learn more about the history and origins of the ml5.js project in the{' '}
         <a
           href="https://itp.nyu.edu/adjacent/issue-3/ml5-friendly-open-source-machine-learning-library-for-the-web/"
           target="_blank"
