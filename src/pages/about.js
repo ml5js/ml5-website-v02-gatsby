@@ -10,26 +10,51 @@ const AboutPage = () => {
       <h1>About</h1>
       <h2>Friendly machine learning for the web!</h2>
       <p>
-        Welcome to the ml5 project! Developing ml5 is not just about developing machine learning
-        software, it is about making machine learning approachable for a broad audience of artists,
-        creative coders, and students. The library provides access to machine learning algorithms
-        and models in the browser, building on top of TensorFlow.js with no other external
-        dependencies.
+        Welcome to the ml5.js project! ml5.js is an open source library with a goal of making
+        machine learning approachable for a broad audience of artists, creative coders, and
+        students. Drawing inspiration from [Processing](https://processing.org) and
+        [p5.js](https://p5js.org/), ml5.js aims to bridge the gap between the technical complexity
+        of machine learning and the creativity of beginners and artists. The library provides access
+        to machine learning algorithms and models in the browser, building on top of TensorFlow.js.
       </p>
       <p>
-        The library is supported by code examples, tutorials, and sample datasets with an emphasis
-        on ethical computing. Bias in data, stereotypical harms, and responsible crowdsourcing are
-        part of the documentation around data collection and usage. We're building friendly machine
-        learning for the web - we're glad you're here!
+        The project began as a collaborative effort at [NYU's ITP
+        program](https://tisch.nyu.edu/itp), involving contributions from students, researchers,
+        faculty, and alumni. Inspired by the p5.js project's focus on making coding accessible and
+        inclusive, ml5.js aims to expand this mission to the domain of machine learning. Initial
+        work on the project was supported by a [Google Research
+        Award](https://www.nyu.edu/about/news-publications/news/2018/january/itp-professor-daniel-shiffman-granted-google-faculty-research-aw.html).
+        which helped to formalize the relationship between TensorFlow.js and ml5.js.
       </p>
-      <p>ml5.js is heavily inspired by Processing and p5.js.</p>
       <p>
-        Learn more about the history and origins of the ml5.js project published on{' '}
+        A key feature of ml5.js is its ability to run pretrained models for interaction. These
+        models can classify images, identify body poses, recognize facial landmarks, hand positions,
+        and more. You can use these models as they are, or as a starting point for further learning
+        along with ml5.js's neural network module which enables training your own models.
+      </p>
+      <p>
+        The ml5.js library comes with code examples and educational materials with a goal of
+        emphasizing ethical computing and opening the door for discussion on bias in data and
+        machine learning. We're dedicated to building user-friendly machine learning for the web,
+        and we're glad you're here!
+      </p>
+      <p>
+        ml5.js is heavily inspired by the work of [The Processing
+        Foundation](https://processingfoundation.org/). Learn more about the history and origins of
+        the ml5.js project in the{' '}
+        <a
+          href="https://itp.nyu.edu/adjacent/issue-3/ml5-friendly-open-source-machine-learning-library-for-the-web/"
+          target="_blank"
+        >
+          ITP Adjacent article
+        </a>{' '}
+        and on{' '}
         <a href="https://ml5js.medium.com/" target="_blank">
-          Medium.com/@ml5js
+          medium.com/@ml5js
         </a>
         .
       </p>
+
       <Spacer />
 
       <h2>Community Statement</h2>
