@@ -137,13 +137,22 @@ const AboutPage = () => {
         scientists, developers, parents, children, and everything in-between.
       </p>
       <p>
-        Funding and support is generously provided by a Google Education grant at NYU's ITP/IMA
-        program. Many thanks to BrowserStack for providing testing support.
+        The design and development of ml5.js is currently organized via a joint collaboration
+        between ITP/IMA at Tisch School of the Arts and the IMA program at NYU Shanghai. Development
+        is supported in part by a grant by the Shanghai Frontiers Science Center of Artificial
+        Intelligence and Deep Learning.
       </p>
       <p>
-        Website designed with ❤ by Milan Gary, Nicole Lloyd, and Arnab Chakravarty. Developed using
-        React/Gatsby.js and Netlify by Wenqi Li, Joey Lee, and Dan Shiffman. Shout out to the
-        OpenMoji Project for glyphs. (This is a trivial test change, will work more on this later.)
+        Initial funding for this project was provided by a [2018 Google Research Award grant at
+        NYU's ITP/IMA
+        program](https://www.nyu.edu/about/news-publications/news/2018/january/itp-professor-daniel-shiffman-granted-google-faculty-research-aw.html).
+      </p>
+      <p>Website design and development is by [FILL IN HERE]</p>
+      <p>[SEE ALL CONTRIBUTORS ETC FOR MORE...]</p>
+      <p>
+        The website is based on the original ml5.js website (archived at LINK TBD) which was
+        designed with ❤ by Milan Gary, Nicole Lloyd, and Arnab Chakravarty and by Wenqi Li, Joey
+        Lee, and Dan Shiffman.
       </p>
       <Spacer />
     </Layout>
