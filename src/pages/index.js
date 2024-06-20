@@ -6,6 +6,8 @@ import TextBox from "../components/TextBox";
 import ProjectBox from "../components/ProjectBox";
 import Spacer from "../components/Spacer";
 import IframeBgComponent from "../components/IframeBgComponent";
+import TextQuoted from "../components/TextQuoted";
+import Button from "../components/Button";
 import { graphql } from 'gatsby';
 
 const IndexPage = ({ data }) => {
@@ -24,6 +26,7 @@ const IndexPage = ({ data }) => {
     // if you plan to update header or footer, check the "Layout.js" file in "layout" folder.
     <Layout>
       <IframeBgComponent />
+
       <section aria-label="Hero">
         <Hero
           title="Friendly Machine Learning for the Web"
@@ -31,57 +34,85 @@ const IndexPage = ({ data }) => {
         />
         <ScrollDownIndicator />
       </section>
-      <Spacer height="3rem" />
+      <Spacer height="5rem" />
+
       <section aria-label="Introduction to ml5.js">
-        <h2>
-          Why ml5.js?
-        </h2>
-        <TextBox
-          title='"More Approachable Machine Learning for the Web"'
-          content="ml5.js aims to make machine learning approachable for a broad audience of artists, creative coders, and students. The library provides access to machine learning algorithms and models in the browser, building on top of TensorFlow.js with no other external dependencies."
-          headingLevel={3}
+        <div style={styles.flexContainer}>
+          <h1>Why ml5.js?</h1>
+        </div>
+        <TextQuoted
+          content="More Approachable Machine Learning for the Web"
         />
-        <Spacer />
-        <h2>
-          What we can do with ml5.js?
-        </h2>
+        <TextBox
+          content="ml5.js aims to make machine learning approachable for a broad audience of artists, creative coders, and students. The library provides access to machine learning algorithms and models in the browser, building on top of TensorFlow.js with no other external dependencies."
+        />
+        <Spacer height="5rem" />
+        <div style={styles.flexContainer}>
+          <h1>What we can do with ml5.js?</h1>
+        </div>
         <div style={styles.flexContainer}>
           <ProjectBox
             title="BodyPose"
-            description="Description"
+            description="Full-body pose estimation"
+            imageURL="images/homepage-icon-bodypose.png"
+            linkURL="https://ml5-next-gen-docs.netlify.app/#/reference/bodypose"
           />
           <ProjectBox
             title="HandPose"
-            description="Description"
+            description="Hand-skeleton finger tracking"
+            imageURL="images/homepage-icon-handpose.png"
+            linkURL="https://ml5-next-gen-docs.netlify.app/#/reference/handpose"
           />
           <ProjectBox
             title="FaceMesh"
-            description="Description"
+            description="Facial landmark detection"
+            imageURL="images/homepage-icon-facemesh.png"
+            linkURL="https://ml5-next-gen-docs.netlify.app/#/reference/facemesh"
           />
           <ProjectBox
-            title="Image Classifier"
-            description="Description"
+            title="ImageClassifier"
+            description="Image content recognition"
+            imageURL="images/homepage-icon-image-classifier.png"
+            linkURL="https://ml5-next-gen-docs.netlify.app/#/reference/image-classifier"
           />
           <ProjectBox
-            title="Sound Classifier"
-            description="Description"
+            title="SoundClassifier"
+            description="Audio detection and classification"
+            imageURL="images/homepage-icon-sound-classifier.png"
+            linkURL="https://ml5-next-gen-docs.netlify.app/#/reference/sound-classifier"
           />
           <ProjectBox
-            title="ml5.js Neural Network"
-            description="Description"
+            title="ml5 NeuralNetwork"
+            description="Train your own neural networks"
+            imageURL="images/homepage-icon-neural-network.png"
+            linkURL="https://ml5-next-gen-docs.netlify.app/#/reference/neural-network"
           />
         </div>
-        <Spacer height="3rem" />
+        <div style={styles.flexContainer}>
+          <Button
+            children="Learn More"
+            url="https://ml5-next-gen-docs.netlify.app/#/reference/overview"
+            fontSize="1.1rem"
+            borderStyle="solid"
+            padding="0.5rem 1.0rem"
+            margin="1.5rem 0"
+          />
+        </div>
+
+
       </section>
 
+      <Spacer height="5rem" />
+
       <section aria-label="Featured Projects">
-        <h2>
-          Discover the creative possibilities of machine learning!
-        </h2>
-        <p>
-          Coming soon!
-        </p>
-        {/* <div style={styles.flexContainer}>
+        <div style={styles.flexContainer}>
+          <h1>
+            Discover the creative possibilities of machine learning!
+          </h1>
+          <p>
+            Coming soon!
+          </p>
+          {/* <div style={styles.flexContainer}>
           {posts.map((post) => (
             // <div key={post.id}></div>
             <ProjectBox
@@ -92,6 +123,7 @@ const IndexPage = ({ data }) => {
             />
           ))}
         </div> */}
+        </div>
       </section>
     </Layout>
   )

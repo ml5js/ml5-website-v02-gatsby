@@ -4,16 +4,17 @@ const TextBox = ({ title, content, headingLevel, customStyle }) => {
   const defaultStyle = {
     container: {
       borderRadius: "1rem",
-      padding: "2.0rem",
+      padding: "0 4.0rem",
       margin: "0 0 1.5rem 0",
-      backgroundColor: "var(--color-bg-light)",
+      // backgroundColor: "var(--color-bg-light)",
     },
     title: {
       margin: "0 0 0.7rem 0",
       color: "var(--color-tertiary)"
     },
     content: {
-      color: "var(--color-text-dark)"
+      color: "var(--color-text-dark)",
+      fontSize: "1.2rem",
     },
     paragraph: {
       textAlign: "justify",
