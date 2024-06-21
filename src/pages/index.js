@@ -19,6 +19,7 @@ const IndexPage = ({ data }) => {
       justifyContent: "center",
       alignItems: "center",
       flexWrap: "wrap",
+      textAlign: "center",
     }
   }
 
@@ -45,6 +46,7 @@ const IndexPage = ({ data }) => {
         />
         <TextBox
           content="ml5.js aims to make machine learning approachable for a broad audience of artists, creative coders, and students. The library provides access to machine learning algorithms and models in the browser, building on top of TensorFlow.js with no other external dependencies."
+          maxWidth="85%"
         />
         <Spacer height="5rem" />
         <div style={styles.flexContainer}>
@@ -109,6 +111,8 @@ const IndexPage = ({ data }) => {
           <h1>
             Discover the creative possibilities of machine learning!
           </h1>
+        </div>
+        <div style={styles.flexContainer}>
           <p>
             Coming soon!
           </p>
