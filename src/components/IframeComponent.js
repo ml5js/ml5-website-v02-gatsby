@@ -13,7 +13,6 @@ const IframeComponent = () => {
     },
     iframe: {
       width: "100%",
-	  maxWidth: '800px', // Max width 800px
       height: "100%",
       border: "none",
     },
