@@ -14,10 +14,11 @@
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  margin-left: 5vw;
 }
 
 .content {
-  margin: 0 0 0 5rem;
+  margin: 0 5vw 0 3vw;
   width: 47rem;
 
   display: flex;
@@ -28,7 +29,7 @@
 .menus {
   display: flex;
   gap: 2.0rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .menus a {
@@ -37,9 +38,42 @@
 }
 
 .text-container {
-  margin: 0 0 2rem 0;
+  margin: 0 1rem 2rem 0;
 }
 
 .text-container p {
   text-align: justify;
+}
+
+@media (max-width: 690px) {
+  .logo {
+    display: none;
+  }
+
+  .content {
+    width: 90%;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menus {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .text-container p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .menus {
+    flex-direction: column;
+    gap: 1.0rem;
+  }
+
+  .menus a {
+    text-align: center;
+  }
 }
