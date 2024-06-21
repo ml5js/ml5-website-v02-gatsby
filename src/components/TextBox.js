@@ -1,12 +1,12 @@
 import React from "react";
 
-const TextBox = ({ title, content, headingLevel, customStyle }) => {
+const TextBox = ({ title, content, maxWidth, bgColor, headingLevel, customStyle }) => {
   const defaultStyle = {
     container: {
       borderRadius: "1rem",
-      padding: "0 4.0rem",
-      margin: "0 0 1.5rem 0",
-      // backgroundColor: "var(--color-bg-light)",
+      maxWidth: maxWidth || "100%",
+      margin: "0 auto 1.5rem auto",
+      backgroundColor: bgColor || "transparent",
     },
     title: {
       margin: "0 0 0.7rem 0",
@@ -17,7 +17,7 @@ const TextBox = ({ title, content, headingLevel, customStyle }) => {
       fontSize: "1.2rem",
     },
     paragraph: {
-      textAlign: "justify",
+      // textAlign: "justify",
     }
   };
 
