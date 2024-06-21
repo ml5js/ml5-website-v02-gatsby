@@ -28,7 +28,7 @@ const Footer = () => {
           <a href="https://twitter.com/ml5js?lang=en" target="ml5 X" title="ml5 X">X(Twitter)</a>
           <a href="https://discord.gg/sUtHWmgg" target="ml5 Discord" title="ml5 Discord">Discord</a>
           <a href="https://github.com/ml5js" target="ml5 GitHub" title="ml5 GitHub">GitHub</a>
-          <a href="https://ml5-next-gen-docs.netlify.app/#/contributing/how-to-contribute" target="_self" title="Contribute">Contribute!</a>
+          <a href="https://docs.ml5js.org/#/contributing/how-to-contribute" target="_self" title="Contribute">Contribute!</a>
         </div>
         <div className={textContainer}>
           <p>
