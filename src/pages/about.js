@@ -132,9 +132,18 @@ const AboutPage = () => {
 
       <h2>Acknowledgments</h2>
       <p>
-        ml5.js is supported by the time and dedication of open source developers from all over the
-        world. We are artists, designers, technologists, researchers, educators, students,
-        scientists, developers, parents, children, and everything in-between.
+        <p>
+          ml5.js is supported by the time and dedication of open source developers from all over the
+          world. We are artists, designers, technologists, researchers, educators, students,
+          scientists, developers, parents, children, and everything in-between. We are proud of our{' '}
+          <a
+            href="https://github.com/ml5js/ml5-next-gen?tab=readme-ov-file#contributors-"
+            target="_blank"
+          >
+            growing list of contributors
+          </a>
+          .
+        </p>
       </p>
       <p>
         The design and development of ml5.js is currently organized via a joint collaboration
