@@ -25,17 +25,20 @@ const AboutPage = () => {
 
       <h2>Community Statement</h2>
       <p>
-        ml5.js is a community interested in exploring and empowering the creative and ethical application of machine learning. This Code of Conduct is intended to foster a community that is open to anyone interested in joining that exploration.
+      ml5.js is a community dedicated to exploring and empowering the creative and ethical application of machine learning. Grounded in the spirit of open source, this Code of Conduct aims to foster an inclusive environment for anyone interested in joining our exploration. We are committed to reducing the chances of misuse that counter our community’s expectations. Through these guidelines, we encourage friendly, innovative, and responsible applications of machine learning.
       </p>
       <p>
-        We are a community of, and in solidarity with, people from every gender identity and expression, sexual orientation, race, ethnicity, size, ability, class, religion, culture, age, skill level, occupation, and background. We acknowledge that not everyone has the time, financial means, or capacity to actively participate, but we recognize and encourage involvement of all kinds. We facilitate and foster access and empowerment. We are all learners.
+Our Code of Conduct and software license are a recognition of the fact that machine learning is a powerful tool; it is as much about math, statistics, and data, as it is about the ways that power is employed in the world. It can be used for creative exploration that surprises and delights and improves the world, it can also be employed (knowingly and unknowingly) to bring harm to real people, places, and things. We’d like to do our best to minimize these negative effects as much as possible.
       </p>
       <p>
-        We accept the claim that technology is a reflection of society, its histories, and its politics. We reject the claim that any technology is neutral and acknowledge that every technology has the potential to do as much harm as good. We acknowledge that when technologies cause harm, the harm disproportionately affects Black/Indigenous, People of Color (BIPOC) queer, trans, disabled, femme, low-income, survivors, and all other marginalized bodies and communities. With this understanding, we work to intentionally engage these groups when hosting, participating in, or developing events (e.g. workshops or meetings), materials (e.g. courses, syllabi, resources), and software (e.g. the ml5.js library, examples, and related and supporting code).
+We are a community of, and in solidarity with, people from every gender identity and expression, sexual orientation, race, ethnicity, size, ability, class, religion, culture, age, skill level, occupation, and background. We acknowledge that not everyone has the time, financial means, or capacity to actively participate, but we recognize and encourage involvement of all kinds. We facilitate and foster access and empowerment. We are all learners.
       </p>
       <p>
-        As part of the ml5.js Code of Conduct, we pledge to design, build, and use ml5.js in a way that centers the aforementioned marginalized bodies and communities first, striving to always confront our biases, privileges, and ignorances for our own good and society at large.
+We accept the claim that technology is a reflection of society, its histories, and its politics. We reject the claim that any technology is neutral and acknowledge that every technology has the potential to do as much harm as good. We acknowledge that when technologies cause harm, the harm disproportionately affects Black/Indigenous, People of Color (BIPOC) queer, trans, disabled, displaced, femme, low-income, survivors, and all other marginalized bodies and communities. 
       </p>
+    <p>
+    With this understanding, we work to intentionally engage these groups when hosting, participating in, or developing events (e.g. workshops or meetings), materials (e.g. courses, syllabi, resources), and software (e.g. the ml5.js library, examples, and related and supporting code). As part of the ml5.js Code of Conduct, we pledge to design, build, and use ml5.js to center these marginalized communities and confront our biases for the good of society.
+    </p>
       <h6>
         In practice:
       </h6>
@@ -76,6 +79,16 @@ const AboutPage = () => {
           We are mindful and kind in our interactions.
         </li>
       </ul>
+    <p>
+    <a href="https://github.com/ml5js/Code-of-Conduct" target="_blank">
+Link to the full ml5 code of conduct
+  </a>
+    </p>
+    <p>
+    <a href="https://medium.com/ml5js/a-new-code-of-conduct-and-license-for-ml5-js-6b0e4c109b76" target="_blank">
+Read more about the development of the ml5 code of conduct and software license 
+  </a>
+    </p>
       <Spacer />
 
       <h2>Acknowledgments</h2>
