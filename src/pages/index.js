@@ -55,43 +55,43 @@ const IndexPage = ({ data }) => {
             title="BodyPose"
             description="Full-body pose estimation"
             imageURL="images/homepage-icon-bodypose.png"
-            linkURL="https://ml5-next-gen-docs.netlify.app/#/reference/bodypose"
+            linkURL="https://docs.ml5js.org/#/reference/bodypose"
           />
           <ProjectBox
             title="HandPose"
             description="Hand-skeleton finger tracking"
             imageURL="images/homepage-icon-handpose.png"
-            linkURL="https://ml5-next-gen-docs.netlify.app/#/reference/handpose"
+            linkURL="https://docs.ml5js.org/#/reference/handpose"
           />
           <ProjectBox
             title="FaceMesh"
             description="Facial landmark detection"
             imageURL="images/homepage-icon-facemesh.png"
-            linkURL="https://ml5-next-gen-docs.netlify.app/#/reference/facemesh"
+            linkURL="https://docs.ml5js.org/#/reference/facemesh"
           />
           <ProjectBox
             title="ImageClassifier"
             description="Image content recognition"
             imageURL="images/homepage-icon-image-classifier.png"
-            linkURL="https://ml5-next-gen-docs.netlify.app/#/reference/image-classifier"
+            linkURL="https://docs.ml5js.org/#/reference/image-classifier"
           />
           <ProjectBox
             title="SoundClassifier"
             description="Audio detection and classification"
             imageURL="images/homepage-icon-sound-classifier.png"
-            linkURL="https://ml5-next-gen-docs.netlify.app/#/reference/sound-classifier"
+            linkURL="https://docs.ml5js.org/#/reference/sound-classifier"
           />
           <ProjectBox
             title="ml5 NeuralNetwork"
             description="Train your own neural networks"
             imageURL="images/homepage-icon-neural-network.png"
-            linkURL="https://ml5-next-gen-docs.netlify.app/#/reference/neural-network"
+            linkURL="https://docs.ml5js.org/#/reference/neural-network"
           />
         </div>
         <div style={styles.flexContainer}>
           <Button
             children="Learn More"
-            url="https://ml5-next-gen-docs.netlify.app/#/reference/overview"
+            url="https://docs.ml5js.org/#/reference/overview"
             fontSize="1.1rem"
             borderStyle="solid"
             padding="0.5rem 1.0rem"
