@@ -135,11 +135,8 @@ const AboutPage = () => {
         <p>
           ml5.js is supported by the time and dedication of open source developers from all over the
           world. We are artists, designers, technologists, researchers, educators, students,
-          scientists, developers, parents, children, and everything in-between. We are proud of our{' '}
-          <a
-            href="https://github.com/ml5js/ml5-next-gen?tab=readme-ov-file#contributors-"
-            target="_blank"
-          >
+          scientists, developers, parents, children, and everything in-between. We are proud of our {' '}
+          <a href="https://github.com/ml5js/ml5-next-gen?tab=readme-ov-file#contributors-" target="_blank">
             growing list of contributors
           </a>
           .
@@ -152,16 +149,17 @@ const AboutPage = () => {
         Intelligence and Deep Learning.
       </p>
       <p>
-        Initial funding for this project was provided by a [2018 Google Research Award grant at
-        NYU's ITP/IMA
-        program](https://www.nyu.edu/about/news-publications/news/2018/january/itp-professor-daniel-shiffman-granted-google-faculty-research-aw.html).
+        Initial funding for this project was provided by a <a href="https://www.nyu.edu/about/news-publications/news/2018/january/itp-professor-daniel-shiffman-granted-google-faculty-research-aw.html" target="_blank">2018 Google Research Award grant at ITP/IMAprogram</a>.
+
       </p>
-      <p>Website design and development is by [FILL IN HERE]</p>
-      <p>[SEE ALL CONTRIBUTORS ETC FOR MORE...]</p>
       <p>
-        The website is based on the original ml5.js website (archived at LINK TBD) which was
-        designed with ❤ by Milan Gary, Nicole Lloyd, and Arnab Chakravarty and by Wenqi Li, Joey
-        Lee, and Dan Shiffman.
+        Website design and development is by J.H. Moon, Quinn Fangqing He, Alan Ren, Apoorva Avadhana, Jo Heun Lee, Miaoye Que, Myrah Sarwar, Ozioma Chukwukeme, and Pacey Xiaozao Wang.
+      </p>
+
+      {/* <p>[SEE ALL CONTRIBUTORS ETC FOR MORE...]</p> */}
+
+      <p>
+        The website is based on <a href="https://archive.ml5js.org/#/" target="_blank">the original ml5.js website</a> which was designed with ❤ by Milan Gary, Nicole Lloyd, and Arnab Chakravarty and developed by Wenqi Li, Joey Lee, and Dan Shiffman.
       </p>
       <Spacer />
     </Layout>
