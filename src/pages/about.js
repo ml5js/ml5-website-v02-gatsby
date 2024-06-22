@@ -163,7 +163,7 @@ const AboutPage = () => {
 
       </p>
       <p>
-        Website design and development is by J.H. Moon, Quinn Fangqing He, Alan Ren, Apoorva Avadhana, Jo Heun Lee, Miaoye Que, Myrah Sarwar, Ozioma Chukwukeme, and Pacey Xiaozao Wang, and supported by Dan Shiffman, Gottfried Haider, and Peter Ziyuan Lin.
+        Website design and development is by J.H. Moon, Quinn Fangqing He, Alan Ren, Apoorva Avadhana, Jo Heun Lee, Miaoye Que, Myrah Sarwar, Ozioma Chukwukeme, and Pacey Xiaozao Wang, and supported by Gottfried Haider, Peter Ziyuan Lin and Dan Shiffman.
       </p>
 
       {/* <p>[SEE ALL CONTRIBUTORS ETC FOR MORE...]</p> */}
