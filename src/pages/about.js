@@ -128,16 +128,16 @@ const AboutPage = () => {
         <li>We make everyone feel heard.</li>
         <li>We are mindful and kind in our interactions.</li>
       </ul>
-    <p>
-    <a href="https://github.com/ml5js/Code-of-Conduct" target="_blank">
-Link to the full ml5 code of conduct
-  </a>
-    </p>
-    <p>
-    <a href="https://medium.com/ml5js/a-new-code-of-conduct-and-license-for-ml5-js-6b0e4c109b76" target="_blank">
-Read more about the development of the ml5 code of conduct and software license 
-  </a>
-    </p>
+      <p>
+        <a href="https://github.com/ml5js/Code-of-Conduct" target="_blank">
+          Link to the full ml5 code of conduct
+        </a>
+      </p>
+      <p>
+        <a href="https://medium.com/ml5js/a-new-code-of-conduct-and-license-for-ml5-js-6b0e4c109b76" target="_blank">
+          Read more about the development of the ml5 code of conduct and software license
+        </a>
+      </p>
       <Spacer />
 
       <h2>Acknowledgments</h2>
@@ -163,7 +163,7 @@ Read more about the development of the ml5 code of conduct and software license
 
       </p>
       <p>
-        Website design and development is by J.H. Moon, Quinn Fangqing He, Alan Ren, Apoorva Avadhana, Jo Heun Lee, Miaoye Que, Myrah Sarwar, Ozioma Chukwukeme, and Pacey Xiaozao Wang.
+        Website design and development is by J.H. Moon, Quinn Fangqing He, Alan Ren, Apoorva Avadhana, Jo Heun Lee, Miaoye Que, Myrah Sarwar, Ozioma Chukwukeme, and Pacey Xiaozao Wang, and supported by Dan Shiffman, Gottfried Haider, and Peter Ziyuan Lin.
       </p>
 
       {/* <p>[SEE ALL CONTRIBUTORS ETC FOR MORE...]</p> */}
