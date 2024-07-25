@@ -59,10 +59,7 @@ const CommunityPage = ({ data }) => {
       <Spacer />
 
       <h2>Featured Projects</h2>
-      <p>
-        Coming soon!
-      </p>
-      {/* <div style={styles.postContainer}>
+      <div style={styles.postContainer}>
         {projects.map((project) => (
           <ProjectBox
             linkURL={project.frontmatter.externalLink}
@@ -73,7 +70,7 @@ const CommunityPage = ({ data }) => {
             tags={project.frontmatter.tags}
           />
         ))}
-      </div> */}
+      </div>
       <Spacer height="2rem" />
 
       <h2>Contribute!</h2>
