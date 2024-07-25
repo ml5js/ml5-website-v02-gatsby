@@ -3,7 +3,7 @@ import Layout from "../layout/Layout"
 import Hero from '../layout/Hero'
 import ScrollDownIndicator from "../components/ScrollDownIndicator";
 import TextBox from "../components/TextBox";
-import ProjectBox from "../components/ProjectBox";
+import ModelIntroBox from "../components/ModelIntroBox";
 import Spacer from "../components/Spacer";
 import IframeBgComponent from "../components/IframeBgComponent";
 import TextQuoted from "../components/TextQuoted";
@@ -53,37 +53,37 @@ const IndexPage = ({ data }) => {
           <h1>What we can do with ml5.js?</h1>
         </div>
         <div style={styles.flexContainer}>
-          <ProjectBox
+          <ModelIntroBox
             title="BodyPose"
             description="Full-body pose estimation"
             imageURL="images/homepage-icon-bodypose.png"
             linkURL="https://docs.ml5js.org/#/reference/bodypose"
           />
-          <ProjectBox
+          <ModelIntroBox
             title="HandPose"
             description="Hand-skeleton finger tracking"
             imageURL="images/homepage-icon-handpose.png"
             linkURL="https://docs.ml5js.org/#/reference/handpose"
           />
-          <ProjectBox
+          <ModelIntroBox
             title="FaceMesh"
             description="Facial landmark detection"
             imageURL="images/homepage-icon-facemesh.png"
             linkURL="https://docs.ml5js.org/#/reference/facemesh"
           />
-          <ProjectBox
+          <ModelIntroBox
             title="ImageClassifier"
             description="Image content recognition"
             imageURL="images/homepage-icon-image-classifier.png"
             linkURL="https://docs.ml5js.org/#/reference/image-classifier"
           />
-          <ProjectBox
+          <ModelIntroBox
             title="SoundClassifier"
             description="Audio detection and classification"
             imageURL="images/homepage-icon-sound-classifier.png"
             linkURL="https://docs.ml5js.org/#/reference/sound-classifier"
           />
-          <ProjectBox
+          <ModelIntroBox
             title="ml5 NeuralNetwork"
             description="Train your own neural networks"
             imageURL="images/homepage-icon-neural-network.png"

@@ -160,7 +160,6 @@ const AboutPage = () => {
       </p>
       <p>
         Initial funding for this project was provided by a <a href="https://www.nyu.edu/about/news-publications/news/2018/january/itp-professor-daniel-shiffman-granted-google-faculty-research-aw.html" target="_blank">2018 Google Research Award grant at ITP/IMAprogram</a>.
-
       </p>
       <p>
         Website design and development is by J.H. Moon, Quinn Fangqing He, Alan Ren, Apoorva Avadhana, Jo Heun Lee, Miaoye Que, Myrah Sarwar, Ozioma Chukwukeme, and Pacey Xiaozao Wang, and supported by Gottfried Haider, Peter Ziyuan Lin, and Dan Shiffman.

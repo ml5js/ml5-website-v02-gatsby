@@ -1,3 +1,7 @@
+/*
+what is there are no images? or external links?
+*/
+
 import * as React from "react";
 import Layout from "../layout/Layout";
 import Button from "../components/Button";
@@ -12,18 +16,18 @@ const CommunityPage = ({ data }) => {
   const events = data.allMarkdownRemark.nodes.filter(
     node => node.frontmatter.templateKey === 'community-event'
   );
-  const posts = data.allMarkdownRemark.nodes.filter(
-    node => node.frontmatter.templateKey === 'community-post'
+  const projects = data.allMarkdownRemark.nodes.filter(
+    node => node.frontmatter.templateKey === 'featured-project'
   );
 
   const styles = {
     postContainer: {
       width: "100%",
-      // backgroundColor: "cyan",
       display: "flex",
       flexWrap: "wrap",
       justifyContent: "flex-start",
-      alignItems: "center",
+      alignItems: "flex-start",
+      gap: "2rem",
     }
   }
 
@@ -55,18 +59,18 @@ const CommunityPage = ({ data }) => {
       <Spacer />
 
       <h2>Featured Projects</h2>
-      <p>
-        Coming soon!
-      </p>
-      {/* <div style={styles.postContainer}>
-        {posts.map((post) => (
-          // <div key={post.id}></div>
+      <div style={styles.postContainer}>
+        {projects.map((project) => (
           <ProjectBox
-            title={post.frontmatter.title}
-            description={post.frontmatter.author}
+            linkURL={project.frontmatter.externalLink}
+            imageURL={project.frontmatter.image}
+            title={project.frontmatter.title}
+            author={project.frontmatter.author}
+            description={project.frontmatter.pitch}
+            tags={project.frontmatter.tags}
           />
         ))}
-      </div> */}
+      </div>
       <Spacer height="2rem" />
 
       <h2>Contribute!</h2>
@@ -96,7 +100,7 @@ export const query = graphql`
     allMarkdownRemark(
       filter: {
         frontmatter: {
-          templateKey: { in: ["community-event", "community-post"] }
+          templateKey: { in: ["community-event", "featured-project"] }
         }
       }
     ) {
@@ -106,6 +110,7 @@ export const query = graphql`
           templateKey
           title
           author
+          pitch
           description
           image
           externalLink
