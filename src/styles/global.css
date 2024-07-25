@@ -26,7 +26,8 @@ Good BG Colors:
 :root {
   --color-primary: #8833ff;
   --color-secondary: #7d77da;
-  --color-tertiary: #00cd75;
+  --color-tertiary: #00a7af;
+  --color-quaternary: #f66;
   --color-transparent: rgb(255, 255, 255, 0.0);
 
   --color-text: #282a3f;

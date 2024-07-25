@@ -8,6 +8,7 @@ import Spacer from "../components/Spacer";
 import IframeBgComponent from "../components/IframeBgComponent";
 import TextQuoted from "../components/TextQuoted";
 import Button from "../components/Button";
+import AnnouncementBanner from "../components/AnnouncementBanner";
 import { graphql } from 'gatsby';
 
 const IndexPage = ({ data }) => {
@@ -27,6 +28,11 @@ const IndexPage = ({ data }) => {
     // if you plan to update header or footer, check the "Layout.js" file in "layout" folder.
     <Layout>
       <IframeBgComponent />
+
+      <AnnouncementBanner
+        emoji="📢"
+        messageHtml="Welcome to our new website! If you experience issues with the older version of the ml5.js release, such as errors like <i style='color:#F66'>'... is not a function'</i> please refer to <a href='https://docs.ml5js.org/#/welcome/faq?id=what-happened-to-older-ml5js-releases' target = '_self'>our FAQ </a> for solutions."
+      />
 
       <section aria-label="Hero">
         <Hero
@@ -100,8 +106,6 @@ const IndexPage = ({ data }) => {
             margin="1.5rem 0"
           />
         </div>
-
-
       </section>
 
       <Spacer height="5rem" />
@@ -129,6 +133,7 @@ const IndexPage = ({ data }) => {
         </div> */}
         </div>
       </section>
+
     </Layout>
   )
 }
