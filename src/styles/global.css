@@ -62,6 +62,9 @@ Good BG Colors:
   --button-hover-bg-color: var(--color-primary);
 
   --navbar-init-height: 6rem;
+
+  /* Rounded corners */
+  --border-radius: 0.5rem;
 }
 
 html,
