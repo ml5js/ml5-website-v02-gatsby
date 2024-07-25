@@ -31,7 +31,8 @@ const IndexPage = ({ data }) => {
 
       <AnnouncementBanner
         emoji="📢"
-        messageHtml="Welcome to our new website! If you experience issues with the older version of the ml5.js release, such as errors like <i style='color:#F66'>'... is not a function'</i> please refer to <a href='https://docs.ml5js.org/#/welcome/faq?id=what-happened-to-older-ml5js-releases' target = '_self'>our FAQ </a> for solutions."
+        messageHtml="Welcome to our new website! We’ve launched a new version of ml5.js with breaking changes. If you encounter errors such as <i style='color:#F66'>'... is not a function'</i> or need now missing features, please refer to <a href='https://docs.ml5js.org/#/welcome/faq?id=what-happened-to-older-ml5js-releases' target='_self'>our FAQ</a> for how to access to the previous version and documentation."
+
       />
 
       <section aria-label="Hero">
