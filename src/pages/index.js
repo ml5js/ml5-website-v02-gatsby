@@ -12,116 +12,109 @@ import AnnouncementBanner from "../components/AnnouncementBanner";
 import { graphql } from 'gatsby';
 
 const IndexPage = ({ data }) => {
-  const posts = data.allMarkdownRemark.nodes;
+	const posts = data.allMarkdownRemark.nodes;
 
-  const styles = {
-    flexContainer: {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      flexWrap: "wrap",
-      textAlign: "center",
-    }
-  }
+	const styles = {
+		flexContainer: {
+			display: 'flex',
+			justifyContent: 'center',
+			alignItems: 'center',
+			flexWrap: 'wrap',
+			textAlign: 'center',
+		},
+	};
 
-  return (
-    // if you plan to update header or footer, check the "Layout.js" file in "layout" folder.
-    <Layout>
-      <IframeBgComponent />
+	return (
+		// if you plan to update header or footer, check the "Layout.js" file in "layout" folder.
+		<Layout>
+			<IframeBgComponent />
 
-      <AnnouncementBanner
-        emoji="📢"
-        messageHtml="Welcome to our new website! We’ve launched a new version of ml5.js with breaking changes. If you encounter errors such as <i style='color:#F66'>'... is not a function'</i> or need features that are no longer available, please refer to <a href='https://docs.ml5js.org/#/welcome/faq?id=what-happened-to-older-ml5js-releases' target='_self'>our FAQ</a> for how to access the previous version and documentation."
+			<AnnouncementBanner
+				emoji="📢"
+				messageHtml="Welcome to our new website! We’ve launched a new version of ml5.js with breaking changes. If you encounter errors such as <i style='color:#F66'>'... is not a function'</i> or need features that are no longer available, please refer to <a href='https://docs.ml5js.org/#/welcome/faq?id=what-happened-to-older-ml5js-releases' target='_self'>our FAQ</a> for how to access the previous version and documentation."
+			/>
 
-      />
+			<section aria-label="Hero">
+				<Hero
+					title="Friendly Machine Learning for the Web"
+					subtitle="A neighborly approach to creating and exploring artificial intelligence in the browser."
+				/>
+				<ScrollDownIndicator />
+			</section>
+			<Spacer height="5rem" />
 
-      <section aria-label="Hero">
-        <Hero
-          title="Friendly Machine Learning for the Web"
-          subtitle="A neighborly approach to creating and exploring artificial intelligence in the browser."
-        />
-        <ScrollDownIndicator />
-      </section>
-      <Spacer height="5rem" />
+			<section aria-label="Introduction to ml5.js">
+				<div style={styles.flexContainer}>
+					<h1>Why ml5.js?</h1>
+				</div>
+				<TextQuoted content="More Approachable Machine Learning for the Web" />
+				<TextBox
+					content="ml5.js aims to make machine learning approachable for a broad audience of artists, creative coders, and students. The library provides access to machine learning algorithms and models in the browser, building on top of TensorFlow.js with no other external dependencies."
+					maxWidth="85%"
+				/>
+				<Spacer height="5rem" />
+				<div style={styles.flexContainer}>
+					<h1>What we can do with ml5.js?</h1>
+				</div>
+				<div style={styles.flexContainer}>
+					<ModelIntroBox
+						title="BodyPose"
+						description="Full-body pose estimation"
+						imageURL="images/homepage-icon-bodypose.png"
+						linkURL="https://docs.ml5js.org/#/reference/bodypose"
+					/>
+					<ModelIntroBox
+						title="HandPose"
+						description="Hand-skeleton finger tracking"
+						imageURL="images/homepage-icon-handpose.png"
+						linkURL="https://docs.ml5js.org/#/reference/handpose"
+					/>
+					<ModelIntroBox
+						title="FaceMesh"
+						description="Facial landmark detection"
+						imageURL="images/homepage-icon-facemesh.png"
+						linkURL="https://docs.ml5js.org/#/reference/facemesh"
+					/>
+					<ModelIntroBox
+						title="ImageClassifier"
+						description="Image content recognition"
+						imageURL="images/homepage-icon-image-classifier.png"
+						linkURL="https://docs.ml5js.org/#/reference/image-classifier"
+					/>
+					<ModelIntroBox
+						title="SoundClassifier"
+						description="Audio detection and classification"
+						imageURL="images/homepage-icon-sound-classifier.png"
+						linkURL="https://docs.ml5js.org/#/reference/sound-classifier"
+					/>
+					<ModelIntroBox
+						title="ml5 NeuralNetwork"
+						description="Train your own neural networks"
+						imageURL="images/homepage-icon-neural-network.png"
+						linkURL="https://docs.ml5js.org/#/reference/neural-network"
+					/>
+				</div>
+				<div style={styles.flexContainer}>
+					<Button
+						children="Learn More"
+						url="https://docs.ml5js.org/#/reference/overview"
+						fontSize="1.1rem"
+						borderStyle="solid"
+						padding="0.5rem 1.0rem"
+						margin="1.5rem 0"
+					/>
+				</div>
+			</section>
 
-      <section aria-label="Introduction to ml5.js">
-        <div style={styles.flexContainer}>
-          <h1>Why ml5.js?</h1>
-        </div>
-        <TextQuoted
-          content="More Approachable Machine Learning for the Web"
-        />
-        <TextBox
-          content="ml5.js aims to make machine learning approachable for a broad audience of artists, creative coders, and students. The library provides access to machine learning algorithms and models in the browser, building on top of TensorFlow.js with no other external dependencies."
-          maxWidth="85%"
-        />
-        <Spacer height="5rem" />
-        <div style={styles.flexContainer}>
-          <h1>What we can do with ml5.js?</h1>
-        </div>
-        <div style={styles.flexContainer}>
-          <ModelIntroBox
-            title="BodyPose"
-            description="Full-body pose estimation"
-            imageURL="images/homepage-icon-bodypose.png"
-            linkURL="https://docs.ml5js.org/#/reference/bodypose"
-          />
-          <ModelIntroBox
-            title="HandPose"
-            description="Hand-skeleton finger tracking"
-            imageURL="images/homepage-icon-handpose.png"
-            linkURL="https://docs.ml5js.org/#/reference/handpose"
-          />
-          <ModelIntroBox
-            title="FaceMesh"
-            description="Facial landmark detection"
-            imageURL="images/homepage-icon-facemesh.png"
-            linkURL="https://docs.ml5js.org/#/reference/facemesh"
-          />
-          <ModelIntroBox
-            title="ImageClassifier"
-            description="Image content recognition"
-            imageURL="images/homepage-icon-image-classifier.png"
-            linkURL="https://docs.ml5js.org/#/reference/image-classifier"
-          />
-          <ModelIntroBox
-            title="SoundClassifier"
-            description="Audio detection and classification"
-            imageURL="images/homepage-icon-sound-classifier.png"
-            linkURL="https://docs.ml5js.org/#/reference/sound-classifier"
-          />
-          <ModelIntroBox
-            title="ml5 NeuralNetwork"
-            description="Train your own neural networks"
-            imageURL="images/homepage-icon-neural-network.png"
-            linkURL="https://docs.ml5js.org/#/reference/neural-network"
-          />
-        </div>
-        <div style={styles.flexContainer}>
-          <Button
-            children="Learn More"
-            url="https://docs.ml5js.org/#/reference/overview"
-            fontSize="1.1rem"
-            borderStyle="solid"
-            padding="0.5rem 1.0rem"
-            margin="1.5rem 0"
-          />
-        </div>
-      </section>
+			<Spacer height="5rem" />
 
-      <Spacer height="5rem" />
-
-      <section aria-label="Featured Projects">
-        <div style={styles.flexContainer}>
-          <h1>
-            Discover the creative possibilities of machine learning!
-          </h1>
-        </div>
-        <div style={styles.flexContainer}>
-          <p>
-            Coming soon!
-          </p>
-          {/* <div style={styles.flexContainer}>
+			<section aria-label="Featured Projects">
+				<div style={styles.flexContainer}>
+					<h1>Discover the creative possibilities of machine learning!</h1>
+				</div>
+				<div style={styles.flexContainer}>
+					<p>Coming soon!</p>
+					{/* <div style={styles.flexContainer}>
           {posts.map((post) => (
             // <div key={post.id}></div>
             <ProjectBox
@@ -132,49 +125,14 @@ const IndexPage = ({ data }) => {
             />
           ))}
         </div> */}
-        </div>
-      </section>
+				</div>
+			</section>
+		</Layout>
+	);
+};
 
-    </Layout>
-  )
-}
+export { Head } from '../components/Head';
 
-export const Head = () => (
-	<>
-		<html lang="en" />
-		<title>ml5.js | Friendly Machine Learning for the Web</title>
-		<meta charset="UTF-8" />
-		<meta
-			name="description"
-			content="ml5.js aims to make machine learning approachable for a broad audience of artists, creative coders, and students. The library provides access to machine learning algorithms and models in the browser, building on top of TensorFlow.js with no other external dependencies."
-		/>
-		<meta
-			property="og:image"
-			content="https://ml5js.org/favicon/og-image.png"
-		/>
-		<meta property="og:image:width" content="1280" />
-		<meta property="og:image:width" content="640" />
-		<link rel="icon" type="image/x-icon" href="favicon/favicon.ico" />
-		<link
-			rel="apple-touch-icon"
-			sizes="180x180"
-			href="favicon/apple-touch-icon.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="favicon/favicon-32x32.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="16x16"
-			href="favicon/favicon-16x16.png"
-		/>
-		<link rel="manifest" href="favicon/site.webmanifest" />
-	</>
-);
 
 
 export default IndexPage;
