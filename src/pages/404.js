@@ -79,6 +79,35 @@ const NotFoundPage = () => {
 
 export default NotFoundPage
 
-export const Head = () => <title>Not found</title>
+export const Head = () => (
+	<>
+		<title>Not found</title>
+		<meta
+			property="og:image"
+			content="https://ml5js.org/favicon/og-image.png"
+		/>
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:width" content="640" />
+		<link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/favicon/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/favicon/site.webmanifest" />
+	</>
+);
 
 

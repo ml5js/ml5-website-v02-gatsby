@@ -175,6 +175,7 @@ const AboutPage = () => {
   );
 };
 
-export const Head = () => <title>ml5.js | Friendly Machine Learning for the Web</title>;
+export { Head } from '../components/Head';
+
 
 export default AboutPage;
