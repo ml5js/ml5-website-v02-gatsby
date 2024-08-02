@@ -1,6 +1,5 @@
 /*
 TODO:
-- helmet
 - SiteMetadata
 */
 
@@ -17,14 +16,14 @@ import '/src/styles/global.css';
 
 const Layout = ({ children }) => {
   return (
-    <section>
-      <Header />
-      <div className={container}>
-        {children}
-      </div>
-      <Footer />
-    </section >
-  )
+		<>
+			<body>
+				<Header />
+				<div className={container}>{children}</div>
+				<Footer />
+			</body>
+		</>
+	);
 }
 
 export default Layout
