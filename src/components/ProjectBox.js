@@ -1,6 +1,15 @@
 import React from "react";
 
-const ProjectBox = ({ title, author, description, width, bgColor, imageURL, linkURL, tags }) => {
+const ProjectBox = ({
+  title,
+  author,
+  description,
+  width,
+  bgColor,
+  imageURL,
+  linkURL,
+  tags,
+}) => {
   // styles and methods for the tags
   const tagColors = {
     BodyPose: "#FFCCBB",
@@ -12,16 +21,12 @@ const ProjectBox = ({ title, author, description, width, bgColor, imageURL, link
     Sentiment: "#FFD1DC",
     NeuralNetwork: "#FFB347",
     TeachableMachine: "#99E9EE",
-    Other: "#EEE"
+    Other: "#EEE",
   };
-  const urlExceptions = [
-    "BodyPose",
-    "HandPose",
-    "FaceMesh",
-  ]
+  const urlExceptions = ["BodyPose", "HandPose", "FaceMesh"];
   const changeUpperCamelToKebabCase = (str) => {
     return str
-      .replace(/([a-z])([A-Z])/g, '$1-$2') // insert hyphen between lower and upper case letters
+      .replace(/([a-z])([A-Z])/g, "$1-$2") // insert hyphen between lower and upper case letters
       .toLowerCase();
   };
   const getTagURL = (tag) => {
@@ -35,7 +40,7 @@ const ProjectBox = ({ title, author, description, width, bgColor, imageURL, link
       modelName = changeUpperCamelToKebabCase(tag);
     }
     return `https://docs.ml5js.org/#/reference/${modelName}`;
-  }
+  };
   // styles for the component
   const styles = {
     container: {
@@ -88,13 +93,18 @@ const ProjectBox = ({ title, author, description, width, bgColor, imageURL, link
     link: {
       textDecoration: "none",
       color: "inherit",
-    }
+    },
   };
   return (
     <div style={styles.container}>
       {imageURL && <img src={imageURL} alt={title} style={styles.image} />}
       <div style={styles.content}>
-        <a href={linkURL || "#"} style={styles.link} target={linkURL ? "_blank" : "_self"} rel={linkURL ? "noopener noreferrer" : ""}>
+        <a
+          href={linkURL || "#"}
+          style={styles.link}
+          target={linkURL ? "_blank" : "_self"}
+          rel={linkURL ? "noopener noreferrer" : ""}
+        >
           <div style={styles.header}>
             <h3 style={styles.title}>{title}</h3>
             <h3 style={styles.author}>{author}</h3>
@@ -102,15 +112,19 @@ const ProjectBox = ({ title, author, description, width, bgColor, imageURL, link
           <p style={styles.description}>{description}</p>
         </a>
         <div style={styles.tagsContainer}>
-          {tags && tags.slice(0, 4).map((tag, index) => (
-            <a
-              href={getTagURL(tag)}
-              key={index}
-              style={{ ...styles.tag, backgroundColor: tagColors[tag] || tagColors['Other'] }}
-            >
-              #{tag}
-            </a>
-          ))}
+          {tags &&
+            tags.slice(0, 4).map((tag, index) => (
+              <a
+                href={getTagURL(tag)}
+                key={index}
+                style={{
+                  ...styles.tag,
+                  backgroundColor: tagColors[tag] || tagColors["Other"],
+                }}
+              >
+                #{tag}
+              </a>
+            ))}
         </div>
       </div>
     </div>
