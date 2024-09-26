@@ -10,7 +10,7 @@ const ProjectBox = ({
   linkURL,
   tags,
 }) => {
-  // styles and methods for the tags
+  // Define tag colors and exceptions for URLs
   const tagColors = {
     BodyPose: "#FFCCBB",
     BodySegmentation: "#FFDFBA",
@@ -21,27 +21,30 @@ const ProjectBox = ({
     Sentiment: "#FFD1DC",
     NeuralNetwork: "#FFB347",
     TeachableMachine: "#99E9EE",
-    Other: "#EEE",
+    Other: "#EEE", // Default for "Other" tags
   };
+
   const urlExceptions = ["BodyPose", "HandPose", "FaceMesh"];
+
+  // Function to convert UpperCamelCase to kebab-case
   const changeUpperCamelToKebabCase = (str) => {
     return str
-      .replace(/([a-z])([A-Z])/g, "$1-$2") // insert hyphen between lower and upper case letters
+      .replace(/([a-z])([A-Z])/g, "$1-$2") // Insert hyphen between lower and upper case letters
       .toLowerCase();
   };
+
+  // Get the URL for the tag based on the name
   const getTagURL = (tag) => {
-    // THIS IS A TEMPORARY FIX
     let modelName = "";
     if (urlExceptions.includes(tag)) {
-      // if the tag is an exception, change it to lower case and return the tag itself
-      modelName = tag.toLowerCase();
+      modelName = tag.toLowerCase(); // Exceptions use lowercase without kebab case
     } else {
-      // if not, change the tag to kebab case and return the URL
-      modelName = changeUpperCamelToKebabCase(tag);
+      modelName = changeUpperCamelToKebabCase(tag); // Convert to kebab case
     }
     return `https://docs.ml5js.org/#/reference/${modelName}`;
   };
-  // styles for the component
+
+  // Styles for the component
   const styles = {
     container: {
       width: width || "30.5rem",
@@ -56,9 +59,7 @@ const ProjectBox = ({
       width: "100%",
       borderRadius: "var(--border-radius)",
     },
-    content: {
-      // padding: "0.5rem",
-    },
+    content: {},
     header: {
       display: "flex",
       justifyContent: "flex-start",
@@ -95,39 +96,52 @@ const ProjectBox = ({
       color: "inherit",
     },
   };
+
   return (
-    <div style={styles.container}>
-      {imageURL && <img src={imageURL} alt={title} style={styles.image} />}
-      <div style={styles.content}>
-        <a
-          href={linkURL || "#"}
-          style={styles.link}
-          target={linkURL ? "_blank" : "_self"}
-          rel={linkURL ? "noopener noreferrer" : ""}
-        >
+    <a
+      href={linkURL || "#"}
+      style={styles.link}
+      target={linkURL ? "_blank" : "_self"}
+      rel={linkURL ? "noopener noreferrer" : ""}
+    >
+      <div style={styles.container}>
+        {imageURL && <img src={imageURL} alt={title} style={styles.image} />}
+        <div style={styles.content}>
           <div style={styles.header}>
             <h3 style={styles.title}>{title}</h3>
             <h3 style={styles.author}>{author}</h3>
           </div>
           <p style={styles.description}>{description}</p>
-        </a>
+        </div>
         <div style={styles.tagsContainer}>
           {tags &&
             tags.slice(0, 4).map((tag, index) => (
-              <a
-                href={getTagURL(tag)}
-                key={index}
-                style={{
-                  ...styles.tag,
-                  backgroundColor: tagColors[tag] || tagColors["Other"],
-                }}
-              >
-                #{tag}
-              </a>
+              tagColors[tag] ? ( // Only create a link if the tag exists in tagColors
+                <a
+                  href={getTagURL(tag)}
+                  key={index}
+                  style={{
+                    ...styles.tag,
+                    backgroundColor: tagColors[tag],
+                  }}
+                >
+                  #{tag}
+                </a>
+              ) : (
+                <div
+                  key={index}
+                  style={{
+                    ...styles.tag,
+                    backgroundColor: tagColors["Other"], // Default color for non-link tags
+                  }}
+                >
+                  #{tag}
+                </div>
+              )
             ))}
         </div>
       </div>
-    </div>
+    </a>
   );
 };
 

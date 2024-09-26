@@ -3,8 +3,8 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `ml5-website-test`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `ml5-website`,
+    siteUrl: `https://ml5js.org`,
   },
   plugins: [
     "gatsby-plugin-image",
