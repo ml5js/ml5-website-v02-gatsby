@@ -8,10 +8,10 @@ externalLink: https://ml5js.org/
 featuredPost: false
 date: 2017-01-04T15:04:10.000Z
 tags:
-  - bodyPose
-  - handPose
-  - mobileNet
-  - faceMesh
+  - BodyPose
+  - HandPose
+  - ImageClassifier
+  - Sentiment
 ---
 
 ### note

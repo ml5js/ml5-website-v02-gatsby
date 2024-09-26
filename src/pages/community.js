@@ -9,15 +9,15 @@ import ProjectBox from "../components/ProjectBox";
 import TextBox from "../components/TextBox";
 import Spacer from "../components/Spacer";
 import IframeComponent from "../components/IframeComponent";
-import { graphql } from 'gatsby';
+import { graphql } from "gatsby";
 
 const CommunityPage = ({ data }) => {
-  // const data = useStaticQuery(query); // unstable, 
+  // const data = useStaticQuery(query); // unstable,
   const events = data.allMarkdownRemark.nodes.filter(
-    node => node.frontmatter.templateKey === 'community-event'
+    (node) => node.frontmatter.templateKey === "community-event"
   );
   const projects = data.allMarkdownRemark.nodes.filter(
-    node => node.frontmatter.templateKey === 'featured-project'
+    (node) => node.frontmatter.templateKey === "featured-project"
   );
 
   const styles = {
@@ -28,22 +28,27 @@ const CommunityPage = ({ data }) => {
       justifyContent: "flex-start",
       alignItems: "flex-start",
       gap: "2rem",
-    }
-  }
+    },
+  };
 
   return (
     <Layout>
       <IframeComponent />
       <h1>Community</h1>
       <p>
-        The ml5.js community page is dedicated to highlighting artists, technologists, makers, activists, thinkers, tinkerers, researchers, scientists, designers, students, and anyone/everyone who are working in and around machine learning in thoughtful ways. Many of these posts not only showcase what is possible with ml5.js but also what can be done when applying machine learning methodologies and technologies more broadly. Special emphasis is given to projects that highlight ethical and critical engagement with technology and/or are simply delightful.
+        The ml5.js community page is dedicated to highlighting artists,
+        technologists, makers, activists, thinkers, tinkerers, researchers,
+        scientists, designers, students, and anyone/everyone who are working in
+        and around machine learning in thoughtful ways. Many of these posts not
+        only showcase what is possible with ml5.js but also what can be done
+        when applying machine learning methodologies and technologies more
+        broadly. Special emphasis is given to projects that highlight ethical
+        and critical engagement with technology and/or are simply delightful.
       </p>
       <Spacer height="2rem" />
 
       <h2>Community Events</h2>
-      <p>
-        Coming soon!
-      </p>
+      <p>Coming soon!</p>
       {/* <div style={styles.postContainer}>
         {events.map((event) => (
           <div key={event.id}>
@@ -59,10 +64,7 @@ const CommunityPage = ({ data }) => {
       <Spacer />
 
       <h2>Featured Projects</h2>
-      <p>
-        Coming soon!
-      </p>
-      {/* <div style={styles.postContainer}>
+      <div style={styles.postContainer}>
         {projects.map((project) => (
           <ProjectBox
             linkURL={project.frontmatter.externalLink}
@@ -73,12 +75,13 @@ const CommunityPage = ({ data }) => {
             tags={project.frontmatter.tags}
           />
         ))}
-      </div> */}
+      </div>
       <Spacer height="2rem" />
 
       <h2>Contribute!</h2>
       <p>
-        If you are interested to share your work, highlight an interesting article/video, or get in touch, we'd love to hear from you!
+        If you are interested to share your work, highlight an interesting
+        article/video, or get in touch, we'd love to hear from you!
       </p>
       <Button
         children="Submit"
@@ -90,8 +93,8 @@ const CommunityPage = ({ data }) => {
         margin="1.5rem 0"
       />
     </Layout>
-  )
-}
+  );
+};
 
 export { Head } from '../components/Head';
 
@@ -124,4 +127,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
