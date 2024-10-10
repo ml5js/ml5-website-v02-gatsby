@@ -47,8 +47,8 @@ const CommunityPage = ({ data }) => {
       </p>
       <Spacer height="2rem" />
 
-      <h2>Community Events</h2>
-      <p>Coming soon!</p>
+      {/* <h2>Community Events</h2> */}
+      {/* <p>Coming soon!</p> */}
       {/* <div style={styles.postContainer}>
         {events.map((event) => (
           <div key={event.id}>
@@ -61,7 +61,7 @@ const CommunityPage = ({ data }) => {
           </div>
         ))}
       </div> */}
-      <Spacer />
+      {/* <Spacer /> */}
 
       <h2>Featured Projects</h2>
       <div style={styles.postContainer}>
