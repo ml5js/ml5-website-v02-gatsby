@@ -6,7 +6,7 @@ pitch: In this tutorial i have shown you how to create AI Image classification u
 description: (none)
 image: ../markdown-images/featured-projects/ali.png
 externalLink: https://youtu.be/ZeSUqLrWWEE?si=UW9CxlDyc96uJhWh
-featuredPost: False
+featuredPost: false
 date: 2017-01-04T15:04:10.000Z
 tags:
   - ImageClassifier

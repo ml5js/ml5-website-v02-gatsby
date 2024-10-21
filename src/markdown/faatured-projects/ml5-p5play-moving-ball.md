@@ -6,7 +6,7 @@ pitch: I show how I combined ml5 PoseNet (machine learning body pose identificat
 description: (none)
 image: ../markdown-images/featured-projects/steve.png
 externalLink: https://youtu.be/bPD8lL0hiLs?si=roq9LurDk8cEgJpM
-featuredPost: False
+featuredPost: false
 date: 2017-01-04T15:04:10.000Z
 tags:
   - BodyPose

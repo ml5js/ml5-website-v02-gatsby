@@ -47,13 +47,14 @@ const ProjectBox = ({
   // Styles for the component
   const styles = {
     container: {
-      width: width || "30.5rem",
+      width: width || "19.9rem",
       display: "flex",
       flexDirection: "column",
       alignItems: "flex-start",
       textAlign: "left",
       transition: "color 0.3s ease-in-out",
       cursor: linkURL ? "pointer" : "default",
+      lineHeight: "1.5",
     },
     image: {
       width: "100%",
@@ -61,22 +62,21 @@ const ProjectBox = ({
     },
     content: {},
     header: {
-      display: "flex",
-      justifyContent: "flex-start",
-      alignItems: "baseline",
       width: "100%",
-      marginTop: "1rem",
+      margin: "1rem 0",
       gap: "1rem",
     },
     title: {
-      fontSize: "1.25rem",
+      fontSize: "1.0rem",
+      marginBottom: "0.5rem",
     },
     author: {
-      fontSize: "1rem",
+      fontSize: "0.9rem",
       color: "var(--color-text-light)",
     },
     description: {
       margin: "0.3rem 0",
+      fontSize: "0.9rem",
     },
     tagsContainer: {
       display: "flex",
