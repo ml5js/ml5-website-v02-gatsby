@@ -2,6 +2,7 @@ import * as React from "react"
 import Layout from "../layout/Layout"
 import Hero from '../layout/Hero'
 import ScrollDownIndicator from "../components/ScrollDownIndicator";
+import ProjectBox from "../components/ProjectBox";
 import TextBox from "../components/TextBox";
 import ModelIntroBox from "../components/ModelIntroBox";
 import Spacer from "../components/Spacer";
@@ -12,15 +13,16 @@ import AnnouncementBanner from "../components/AnnouncementBanner";
 import { graphql } from 'gatsby';
 
 const IndexPage = ({ data }) => {
-	const posts = data.allMarkdownRemark.nodes;
+	const projects = data.allMarkdownRemark.nodes;
 
 	const styles = {
 		flexContainer: {
 			display: 'flex',
 			justifyContent: 'center',
-			alignItems: 'center',
+			alignItems: 'flex-start',
 			flexWrap: 'wrap',
 			textAlign: 'center',
+			gap: '1rem',
 		},
 	};
 
@@ -113,18 +115,18 @@ const IndexPage = ({ data }) => {
 					<h1>Discover the creative possibilities of machine learning!</h1>
 				</div>
 				<div style={styles.flexContainer}>
-					<p>Coming soon!</p>
-					{/* <div style={styles.flexContainer}>
-          {posts.map((post) => (
-            // <div key={post.id}></div>
-            <ProjectBox
-              title={post.frontmatter.title}
-              description={post.frontmatter.author}
-              width="100%"
-              bgColor="var(--color-bg-light)"
-            />
-          ))}
-        </div> */}
+					{projects.map((project) => (
+						<ProjectBox
+							linkURL={project.frontmatter.externalLink}
+							imageURL={project.frontmatter.image}
+							title={project.frontmatter.title}
+							author={project.frontmatter.author}
+							// description={project.frontmatter.pitch}
+							tags={project.frontmatter.tags}
+							width="30.5rem"
+						/>
+					))}
+					<Spacer height="2rem" />
 				</div>
 			</section>
 		</Layout>
@@ -146,11 +148,16 @@ export const query = graphql`
       nodes {
         id
         frontmatter {
+          templateKey
           title
           author
+          pitch
           description
           image
           externalLink
+          featuredPost
+          date(formatString: "MMMM DD, YYYY")
+          tags
         }
       }
     }
