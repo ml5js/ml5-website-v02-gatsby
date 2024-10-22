@@ -2,7 +2,7 @@
 templateKey: "featured-project"
 title: p5.js Coding Tutorial with ml5.js
 author: Patt Vira
-pitch:
+pitch: These tutorials demonstrate how to create diverse interactive experiences using p5.js and ml5.js.
 description: (none)
 image: ../markdown-images/featured-projects/patt-vira.png
 externalLink: https://www.youtube.com/playlist?list=PL0beHPVMklwhxJ6G3Hn4uLQTDe4Y562Dr
