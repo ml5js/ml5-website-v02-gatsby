@@ -2,7 +2,7 @@
 templateKey: "featured-project"
 title: AI Image Classification with ml5.js
 author: Ali Aslan
-pitch: In this tutorial i have shown you how to create AI Image classification using machine learning.
+pitch: This tutorial demonstrates how to create AI image classification using machine learning.
 description: (none)
 image: ../markdown-images/featured-projects/ali.png
 externalLink: https://youtu.be/ZeSUqLrWWEE?si=UW9CxlDyc96uJhWh

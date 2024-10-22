@@ -2,7 +2,7 @@
 templateKey: "featured-project"
 title: ml5 + p5play Moving Ball
 author: Steve's Makerspace
-pitch: I show how I combined ml5 PoseNet (machine learning body pose identification) with p5play (physics and game engine) using p5.js.
+pitch: This tutorial shows how ml5 PoseNet (machine learning body pose identification) is combined with p5play (physics and game engine) using p5.js.
 description: (none)
 image: ../markdown-images/featured-projects/steve.png
 externalLink: https://youtu.be/bPD8lL0hiLs?si=roq9LurDk8cEgJpM

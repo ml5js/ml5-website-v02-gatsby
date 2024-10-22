@@ -2,7 +2,7 @@
 templateKey: "featured-project"
 title: Image Classification with MobileNet
 author: The Coding Train
-pitch: In this video, I use the "pre-trained" MobileNet model to classify the content of an image.
+pitch: This tutorial uses the "pre-trained" MobileNet model to classify the content of an image.
 description: (none)
 image: ../markdown-images/featured-projects/imaga-classification.png
 externalLink: https://thecodingtrain.com/tracks/ml5js-beginners-guide/ml5/1-classification/image-classification
