@@ -17,12 +17,14 @@ const IndexPage = ({ data }) => {
 
 	const styles = {
 		flexContainer: {
+			// backgroundColor: 'cyan',
 			display: 'flex',
 			justifyContent: 'center',
 			alignItems: 'flex-start',
 			flexWrap: 'wrap',
 			textAlign: 'center',
-			gap: '1rem',
+			gap: '1.2rem',
+			margin: '1rem auto',
 		},
 	};
 
@@ -123,7 +125,7 @@ const IndexPage = ({ data }) => {
 							author={project.frontmatter.author}
 							// description={project.frontmatter.pitch}
 							tags={project.frontmatter.tags}
-							width="30.5rem"
+							width="20.4rem"
 						/>
 					))}
 					<Spacer height="2rem" />
