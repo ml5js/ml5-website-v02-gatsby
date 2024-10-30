@@ -1,26 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400&family=Lato:wght@300;400;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-/* 
-Possible fonts to use:
-  Arvo
-  Nunito / Nunito Sans:
-  Lato
-  Montserrat
-  Poppins
-
-Colors:
-Primary: 9047FF to 6E34E9 (AA checked)
-Secondary: 7d77da
-
-14c8c7;
-
-green:
-90c819
-00ee88
-
-Good BG Colors:
-  #f4f7ff -- blue-ish
-*/
-
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400&family=Lato:wght@300;400;700&family=Noto+Sans+Mono:wght@400&display=swap');
 
 :root {
   --color-primary: #8833ff;
@@ -42,7 +20,7 @@ Good BG Colors:
   --link-hover-bg-color: var(--color-transparent);
 
   --font-serif: "Arvo", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-sans-serif: "Nunito Sans", system-ui, -apple-system, "Helvetica", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans-serif: "Lato", system-ui, -apple-system, "Helvetica", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-monospace: "Noto Sans Mono", "Courier New", monospace;
 
   --body-color: var(--color-text);
