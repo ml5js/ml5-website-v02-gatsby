@@ -9,7 +9,7 @@ import {
 import '/src/styles/global.css';
 
 const Button = ({
-  children, url, target, txtColor, bgColor, fontSize, borderStyle, padding, margin, customStyle
+  children, url, target, txtColor, bgColor, fontSize, borderStyle, padding, margin, letterSpacing, customStyle
 }) => {
   const defaultStyle = {
     color: txtColor || "var(--color-primary)",
@@ -18,6 +18,7 @@ const Button = ({
     fontSize: fontSize || "1.0rem",
     padding: padding || "0.18rem 0.4rem",
     margin: margin || "0 0.5rem",
+    letterSpacing: letterSpacing || "-0.01rem",
   };
 
   const styles = { ...defaultStyle, ...customStyle };
