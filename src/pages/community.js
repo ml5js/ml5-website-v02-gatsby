@@ -6,19 +6,18 @@ import * as React from "react";
 import Layout from "../layout/Layout";
 import Button from "../components/Button";
 import ProjectBox from "../components/ProjectBox";
-import TextBox from "../components/TextBox";
 import Spacer from "../components/Spacer";
 import IframeComponent from "../components/IframeComponent";
 import { graphql } from "gatsby";
 
 const CommunityPage = ({ data }) => {
-  // const data = useStaticQuery(query); // unstable,
   const events = data.allMarkdownRemark.nodes.filter(
     (node) => node.frontmatter.templateKey === "community-event"
   );
   const projects = data.allMarkdownRemark.nodes.filter(
     (node) => node.frontmatter.templateKey === "featured-project"
   );
+  projects.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
 
   const styles = {
     postContainer: {
@@ -71,7 +70,7 @@ const CommunityPage = ({ data }) => {
             imageURL={project.frontmatter.image}
             title={project.frontmatter.title}
             author={project.frontmatter.author}
-            description={project.frontmatter.pitch}
+            description={project.frontmatter.description}
             tags={project.frontmatter.tags}
           />
         ))}
@@ -116,12 +115,11 @@ export const query = graphql`
           templateKey
           title
           author
-          pitch
           description
           image
           externalLink
           featuredPost
-          date(formatString: "MMMM DD, YYYY")
+          date
           tags
         }
       }

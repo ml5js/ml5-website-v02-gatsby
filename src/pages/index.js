@@ -13,7 +13,8 @@ import AnnouncementBanner from "../components/AnnouncementBanner";
 import { graphql } from 'gatsby';
 
 const IndexPage = ({ data }) => {
-	const projects = data.allMarkdownRemark.nodes;
+	const projects = data.allMarkdownRemark.nodes
+	projects.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
 
 	const styles = {
 		flexContainer: {
@@ -123,7 +124,6 @@ const IndexPage = ({ data }) => {
 							imageURL={project.frontmatter.image}
 							title={project.frontmatter.title}
 							author={project.frontmatter.author}
-							// description={project.frontmatter.pitch}
 							tags={project.frontmatter.tags}
 							width="20.4rem"
 						/>
@@ -153,12 +153,10 @@ export const query = graphql`
           templateKey
           title
           author
-          pitch
-          description
           image
           externalLink
           featuredPost
-          date(formatString: "MMMM DD, YYYY")
+          date
           tags
         }
       }
