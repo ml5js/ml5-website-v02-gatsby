@@ -1,7 +1,3 @@
-/*
-what is there are no images? or external links?
-*/
-
 import * as React from "react";
 import Layout from "../layout/Layout";
 import Button from "../components/Button";
@@ -62,12 +58,19 @@ const CommunityPage = ({ data }) => {
       </div> */}
       {/* <Spacer /> */}
 
+      {/* show all iamges */}
+      {/* <div>
+        {projects.map((project) => (
+          <img src={project.frontmatter.image.childImageSharp.gatsbyImageData.images.fallback.src} />
+        ))}
+      </div> */}
       <h2>Featured Projects</h2>
       <div style={styles.postContainer}>
         {projects.map((project) => (
           <ProjectBox
             linkURL={project.frontmatter.externalLink}
-            imageURL={project.frontmatter.image}
+            //imageURL={project.frontmatter.image}
+            image={project.frontmatter.image.childImageSharp.gatsbyImageData.images.fallback.src}
             title={project.frontmatter.title}
             author={project.frontmatter.author}
             description={project.frontmatter.description}
@@ -100,6 +103,38 @@ export { Head } from '../components/Head';
 export default CommunityPage;
 
 // GraphQL
+
+export const query = graphql`
+  query CommunityQuery {
+    allMarkdownRemark(
+      filter: {
+        frontmatter: {
+          templateKey: { in: ["community-event", "featured-project"] }
+        }
+      }
+    ) {
+      nodes {
+        id
+        frontmatter {
+          templateKey
+          title
+          author
+          description
+          image {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED),
+            }
+          }
+          externalLink
+          tags
+          featured
+        }
+      }
+    }
+  }
+`;
+
+/*
 export const query = graphql`
   query CommunityQuery {
     allMarkdownRemark(
@@ -126,3 +161,4 @@ export const query = graphql`
     }
   }
 `;
+*/

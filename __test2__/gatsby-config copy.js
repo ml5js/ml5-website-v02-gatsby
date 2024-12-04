@@ -12,12 +12,20 @@ module.exports = {
 		description: `ml5 | Friendly Machine Learning for the Web`,
 	},
 	plugins: [
+		'gatsby-transformer-remark',
+		{
+			resolve: 'gatsby-source-filesystem',
+			options: {
+				name: 'markdown',
+				path: `${__dirname}/src/markdown/`,
+			},
+		},
 		'gatsby-plugin-image',
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: `posts`,
-				path: `${__dirname}/content`,
+				path: `${__dirname}/src/markdown/`,
 			},
 		},
 		{
@@ -34,7 +42,7 @@ module.exports = {
 					{
 						resolve: `gatsby-remark-images`,
 						options: {
-							maxWidth: 1000,
+							maxWidth: 800,
 						},
 					},
 					{
@@ -100,7 +108,7 @@ module.exports = {
               }
             }`,
 						output: "/rss.xml",
-						title: "ml5 | RSS Feed",
+						title: "MOQN | RSS Feed",
 					},
 				],
 			},

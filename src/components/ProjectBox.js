@@ -6,7 +6,7 @@ const ProjectBox = ({
   description,
   width,
   bgColor,
-  imageURL,
+  image,
   linkURL,
   tags,
 }) => {
@@ -105,7 +105,7 @@ const ProjectBox = ({
       rel={linkURL ? "noopener noreferrer" : ""}
     >
       <div style={styles.container}>
-        {imageURL && <img src={imageURL} alt={title} style={styles.image} />}
+        {image && <img src={image} alt={title} style={styles.image} />}
         <div style={styles.content}>
           <div style={styles.header}>
             <h3 style={styles.title}>{title}</h3>
