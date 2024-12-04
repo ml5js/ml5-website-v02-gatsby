@@ -9,13 +9,11 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 import {
-  container,
+	container,
 } from '../styles/Layout.module.css';
 
-import '/src/styles/global.css';
-
 const Layout = ({ children }) => {
-  return (
+	return (
 		<>
 			<body>
 				<Header />
