@@ -17,19 +17,13 @@ const ProjectBox = ({ project }) => {
   return (
     <Link
       to={slug}
-      className={projectBox} // Add projectBox class for styling
+      className={projectBox}
       itemScope
       itemType="http://schema.org/CreativeWork"
-      style={{
-        backgroundImage: `url(${image})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
     >
+      <img src={image} alt={title} />
       <header>
-        <h2>
-          <span itemProp="name">{title}</span>
-        </h2>
+        <h2 itemProp="name">{title}</h2>
         <p
           dangerouslySetInnerHTML={{
             __html: description || excerpt,
@@ -37,15 +31,6 @@ const ProjectBox = ({ project }) => {
           itemProp="description"
         />
       </header>
-      <section>
-        {/* <p itemProp="keywords">{keywords}</p> */}
-        {/* <p
-          dangerouslySetInnerHTML={{
-            __html: description || excerpt,
-          }}
-          itemProp="description"
-        /> */}
-      </section>
     </Link>
   );
 };

@@ -1,6 +1,9 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 
+import Layout from "../layout/Layout";
+import Spacer from "../components/Spacer";
+import IframeComponent from "../components/IframeComponent";
 // import Bio from "../components/Bio"
 import PostLayout from "../components/PostLayout";
 import Seo from "../components/seo";
@@ -24,18 +27,20 @@ const PostIndex = ({ data, location }) => {
 
   // if there are posts, display them in a grid
   return (
+    <Layout>
+      <IframeComponent />
+      <h1>Blog</h1>
+      <PostLayout location={location} title={siteTitle}>
+        <div className="project-grid">
+          {projects.map(project => (
+            <ProjectBox key={project.fields.slug} project={project} />
+          ))}
+        </div>
+        {/* <Bio /> */}
+      </PostLayout>
+      <Spacer />
+    </Layout>
 
-    <PostLayout location={location} title={siteTitle}>
-      <div className="project-grid">
-        {projects.map(project => (
-          <ProjectBox key={project.fields.slug} project={project} />
-        ))}
-      </div>
-      <p style={{ color: "#AAA", textAlign: "center" }}>
-        The projects have been reorganized for application purposes. Further details will be updated soon.
-      </p>
-      {/* <Bio /> */}
-    </PostLayout>
   )
 }
 
