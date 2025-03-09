@@ -28,7 +28,7 @@ const LearnPage = ({ data }) => {
       <IframeComponent />
       <h1>Learn</h1>
       <p>
-        The ml5.js Learn page introduces the fundamentals of ml5.js while also demonstrating how machine learning methodologies and technologies can be applied more broadly.
+        The ml5.js Learn page introduces the fundamentals of ml5.js and demonstrates how machine learning methodologies and technologies can be applied more broadly.
       </p>
       <Spacer height="2rem" />
 
