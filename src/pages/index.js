@@ -190,4 +190,25 @@ export const query = graphql`
 		}
 	}
 `
+export const query = graphql`
+	query CommunityQuery {
+		allMarkdownRemark(
+			filter: { frontmatter: { featuredPost: { eq: true } } }
+		) {
+			nodes {
+				id
+				frontmatter {
+					templateKey
+					title
+					author
+					image
+					externalLink
+					featuredPost
+					date
+					tags
+				}
+			}
+		}
+	}
+`
 */
