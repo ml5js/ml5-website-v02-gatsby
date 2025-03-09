@@ -1,0 +1,71 @@
+.postBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  /* Space between image and text */
+  /* background-color: #f9f9f9; */
+  width: 100%;
+  max-width: var(--wrapper-maxWidth);
+  height: auto;
+  /* Adjust height based on content */
+  border-radius: var(--rounded-corner);
+  padding: 1rem 0;
+  text-decoration: none;
+  /* Remove underline from Link */
+  color: inherit;
+  /* Ensure text color is not overridden */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.postBox:hover {
+  transform: scale(1.01);
+  /* background-color: #eaeaea; */
+}
+
+.postBox img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: var(--rounded-corner);
+  flex-shrink: 0;
+  /* Prevents shrinking */
+}
+
+.postBox header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  /* Allow text to take available space */
+}
+
+.postBox h2 {
+  font-size: var(--fontSize-3);
+  margin: 0;
+  color: var(--color-text);
+}
+
+.postBox h3 {
+  font-size: var(--fontSize-4);
+  margin: 0.2rem 0 0.5rem 0;
+  color: var(--color-text-light);
+}
+
+.postBox p {
+  font-size: var(--fontSize-1);
+  color: #444;
+  margin: var(--spacing-1) 0 0 0;
+}
+
+
+.postBox:hover h2 {
+  color: var(--color-secondary);
+}
+
+/* Adjustments for better spacing and readability */
+.postBox+.postBox {
+  margin-top: var(--spacing-3);
+  /* Adds space between items */
+}

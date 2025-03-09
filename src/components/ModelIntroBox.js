@@ -7,7 +7,7 @@ const ModelIntroBox = ({ title, description, width, bgColor, imageURL, linkURL }
       flexDirection: "column",
       justifyContent: "flex-end",
       alignItems: "center",
-      width: width || "18.0rem",
+      width: width || "17.4rem",
       height: "12.5rem",
       backgroundColor: imageURL ? "transparent" : (bgColor || "#f0f0f0"),
       backgroundImage: imageURL ? `url(${imageURL})` : "none",

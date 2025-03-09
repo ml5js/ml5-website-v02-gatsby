@@ -1,12 +1,11 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 
+import '/src/styles/global.css';
 import {
   customButton,
   customA,
 } from './Button.module.css'
-
-import '/src/styles/global.css';
 
 const Button = ({
   children, url, target, txtColor, bgColor, fontSize, borderStyle, padding, margin, letterSpacing, customStyle

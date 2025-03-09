@@ -6,7 +6,7 @@ const ProjectBox = ({
   description,
   width,
   bgColor,
-  imageURL,
+  image,
   linkURL,
   tags,
 }) => {
@@ -47,7 +47,7 @@ const ProjectBox = ({
   // Styles for the component
   const styles = {
     container: {
-      width: width || "19.9rem",
+      width: width || "19.3rem",
       display: "flex",
       flexDirection: "column",
       alignItems: "flex-start",
@@ -105,7 +105,7 @@ const ProjectBox = ({
       rel={linkURL ? "noopener noreferrer" : ""}
     >
       <div style={styles.container}>
-        {imageURL && <img src={imageURL} alt={title} style={styles.image} />}
+        {image && <img src={image} alt={title} style={styles.image} />}
         <div style={styles.content}>
           <div style={styles.header}>
             <h3 style={styles.title}>{title}</h3>

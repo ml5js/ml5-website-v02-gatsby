@@ -58,6 +58,7 @@ const IndexPage = ({ data }) => {
 					maxWidth="85%"
 				/>
 				<Spacer height="5rem" />
+
 				<div style={styles.flexContainer}>
 					<h1>What we can do with ml5.js?</h1>
 				</div>
@@ -121,11 +122,11 @@ const IndexPage = ({ data }) => {
 					{projects.map((project) => (
 						<ProjectBox
 							linkURL={project.frontmatter.externalLink}
-							imageURL={project.frontmatter.image}
+							image={project.frontmatter.image.childImageSharp.gatsbyImageData.images.fallback.src}
 							title={project.frontmatter.title}
 							author={project.frontmatter.author}
 							tags={project.frontmatter.tags}
-							width="20.4rem"
+							width="19.8rem"
 						/>
 					))}
 					<Spacer height="2rem" />
@@ -145,7 +146,7 @@ export default IndexPage;
 export const query = graphql`
   query CommunityQuery {
     allMarkdownRemark(
-      filter: { frontmatter: { featuredPost: { eq: true } } }
+      filter: { frontmatter: { featured: { eq: true } } }
     ) {
       nodes {
         id
@@ -153,13 +154,41 @@ export const query = graphql`
           templateKey
           title
           author
-          image
-          externalLink
-          featuredPost
+          image {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED),
+            }
+          }
+          externalLink 
           date
           tags
+					featured
         }
       }
     }
   }
 `
+
+/*
+export const query = graphql`
+	query CommunityQuery {
+		allMarkdownRemark(
+			filter: { frontmatter: { featuredPost: { eq: true } } }
+		) {
+			nodes {
+				id
+				frontmatter {
+					templateKey
+					title
+					author
+					image
+					externalLink
+					featuredPost
+					date
+					tags
+				}
+			}
+		}
+	}
+`
+*/
