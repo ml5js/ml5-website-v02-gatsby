@@ -1,5 +1,5 @@
 ---
-templateKey: featured-project
+templateKey: tutorial
 title: Pose Estimation with ml5.js
 author: The Coding Train
 description: This tutorial explores the BodyPose model in ml5.js with MoveNet and BlazePose, showing how to track body keypoints and visualize 'skeleton' connections using live video.

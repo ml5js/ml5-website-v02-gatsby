@@ -6,22 +6,28 @@ import Spacer from "../components/Spacer";
 import IframeComponent from "../components/IframeComponent";
 // import Bio from "../components/Bio"
 import PostLayout from "../components/PostLayout";
+import PostBox from "../components/PostBox";
 import Seo from "../components/seo";
-import ProjectBox from "../blog-components/ProjectBox";
+
 
 const PostIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const projects = data.allMarkdownRemark.nodes
+  const posts = data.allMarkdownRemark.nodes
 
   // if there are no posts, display a message
-  if (projects.length === 0) {
+  if (posts.length === 0) {
     return (
-      <PostLayout location={location} title={siteTitle}>
-        {/* <Bio /> */}
-        <p>
-          No posts found.
-        </p>
-      </PostLayout>
+      <Layout>
+        <IframeComponent />
+        <h1>Blog</h1>
+        <PostLayout location={location} title={siteTitle}>
+          {/* <Bio /> */}
+          <p>
+            No posts found.
+          </p>
+        </PostLayout>
+        <Spacer />
+      </Layout>
     )
   }
 
@@ -32,8 +38,8 @@ const PostIndex = ({ data, location }) => {
       <h1>Blog</h1>
       <PostLayout location={location} title={siteTitle}>
         <div className="project-grid">
-          {projects.map(project => (
-            <ProjectBox key={project.fields.slug} project={project} />
+          {posts.map(post => (
+            <PostBox key={post.fields.slug} post={post} />
           ))}
         </div>
         {/* <Bio /> */}
@@ -61,7 +67,11 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      filter: { frontmatter: { featured: { eq: true } } }
+      filter: { 
+        frontmatter: { 
+          templateKey: { eq: "blog-post" } 
+        } 
+      }
     ) {
       nodes {
         excerpt
@@ -69,11 +79,11 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
-
           title
           description
           keywords
           featured
+          templateKey
           image {
             childImageSharp {
               gatsbyImageData(placeholder: BLURRED),
@@ -84,6 +94,7 @@ export const pageQuery = graphql`
     }
   }
 `
+
 
 // sort: { frontmatter: { date: DESC } } // in allMarkdownRemark
 // date(formatString: "MMMM DD, YYYY") // in frontmatter

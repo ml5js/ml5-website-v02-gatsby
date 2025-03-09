@@ -125,7 +125,7 @@ const IndexPage = ({ data }) => {
 							title={project.frontmatter.title}
 							author={project.frontmatter.author}
 							tags={project.frontmatter.tags}
-							width="20.4rem"
+							width="19.8rem"
 						/>
 					))}
 					<Spacer height="2rem" />

@@ -47,7 +47,7 @@ const ProjectBox = ({
   // Styles for the component
   const styles = {
     container: {
-      width: width || "19.9rem",
+      width: width || "19.3rem",
       display: "flex",
       flexDirection: "column",
       alignItems: "flex-start",

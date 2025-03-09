@@ -1,5 +1,5 @@
 ---
-templateKey: featured-project
+templateKey: tutorial
 title: Image Classification with MobileNet
 author: The Coding Train
 description: This tutorial uses the "pre-trained" MobileNet model to classify the content of an image.

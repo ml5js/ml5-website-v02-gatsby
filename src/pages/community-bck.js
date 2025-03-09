@@ -2,26 +2,18 @@ import * as React from "react";
 import Layout from "../layout/Layout";
 import Button from "../components/Button";
 import ProjectBox from "../components/ProjectBox";
-import PostLayout from "../components/PostLayout";
-import PostBox from "../components/PostBox";
 import Spacer from "../components/Spacer";
 import IframeComponent from "../components/IframeComponent";
 import { graphql } from "gatsby";
 
-const CommunityPage = ({ data, location }) => {
-  // const events = data.allMarkdownRemark.nodes.filter(
-  //   (node) => node.frontmatter.templateKey === "community-event"
-  // );
+const CommunityPage = ({ data }) => {
+  const events = data.allMarkdownRemark.nodes.filter(
+    (node) => node.frontmatter.templateKey === "community-event"
+  );
   const projects = data.allMarkdownRemark.nodes.filter(
     (node) => node.frontmatter.templateKey === "featured-project"
   );
   projects.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
-
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes.filter(
-    (node) => node.frontmatter.templateKey === "blog-post"
-  );
-  posts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
 
   const styles = {
     postContainer: {
@@ -50,42 +42,43 @@ const CommunityPage = ({ data, location }) => {
       </p>
       <Spacer height="2rem" />
 
-      {posts.length > 0 && (
-        <>
-          <h2>ml5 Blog</h2>
-          <PostLayout location={location} title={siteTitle}>
-            <div className="project-grid">
-              {posts.map(post => (
-                <PostBox key={post.fields.slug} post={post} />
-              ))}
-            </div>
-            {/* <Bio /> */}
-          </PostLayout>
-          <Spacer height="2rem" />
-        </>
-      )}
-
-      {projects.length > 0 && (
-        <>
-          <h2>Featured Projects</h2>
-          <div style={styles.postContainer}>
-            {projects.map((project) => (
-              <ProjectBox
-                linkURL={project.frontmatter.externalLink}
-                //imageURL={project.frontmatter.image}
-                image={project.frontmatter.image.childImageSharp.gatsbyImageData.images.fallback.src}
-                title={project.frontmatter.title}
-                author={project.frontmatter.author}
-                description={project.frontmatter.description}
-                tags={project.frontmatter.tags}
-              />
-            ))}
+      {/* <h2>Community Events</h2> */}
+      {/* <p>Coming soon!</p> */}
+      {/* <div style={styles.postContainer}>
+        {events.map((event) => (
+          <div key={event.id}>
+            <TextBox
+              title={event.frontmatter.title}
+              content={[event.frontmatter.description]}
+              headingLevel={3}
+              width="95%"
+            />
           </div>
-          <Spacer height="2rem" />
-        </>
-      )}
+        ))}
+      </div> */}
+      {/* <Spacer /> */}
 
-
+      {/* show all iamges */}
+      {/* <div>
+        {projects.map((project) => (
+          <img src={project.frontmatter.image.childImageSharp.gatsbyImageData.images.fallback.src} />
+        ))}
+      </div> */}
+      <h2>Featured Projects</h2>
+      <div style={styles.postContainer}>
+        {projects.map((project) => (
+          <ProjectBox
+            linkURL={project.frontmatter.externalLink}
+            //imageURL={project.frontmatter.image}
+            image={project.frontmatter.image.childImageSharp.gatsbyImageData.images.fallback.src}
+            title={project.frontmatter.title}
+            author={project.frontmatter.author}
+            description={project.frontmatter.description}
+            tags={project.frontmatter.tags}
+          />
+        ))}
+      </div>
+      <Spacer height="2rem" />
 
       <h2>Contribute!</h2>
       <p>

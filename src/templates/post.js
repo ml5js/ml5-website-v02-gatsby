@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby";
 import Layout from "../layout/Layout";
 import PostLayout from "../components/PostLayout";
 import Seo from "../components/seo";
+import Spacer from "../components/Spacer";
 
 const PostTemplate = ({
   data: { previous, next, site, markdownRemark: post, allFile },
@@ -74,30 +75,33 @@ const PostTemplate = ({
   return (
     <Layout>
       <PostLayout location={location} title={siteTitle}>
+        {/* apply this style somewhere else */}
         <article
+          style={{ maxWidth: "800px", margin: "0 auto" }}
           className="post"
           itemScope
           itemType="http://schema.org/CreativeWork"
         >
+          <Spacer height="4rem" />
           <header>
             <h1 itemProp="name">{post.frontmatter.title}</h1>
             <p itemProp="dateCreated">
-              <span itemProp="description">{post.frontmatter.description}</span>
+              <span itemProp="description">{post.frontmatter.keywords}</span>
               &nbsp;&nbsp;|&nbsp;&nbsp;
               <span itemProp="dateCreated">{processDate(post.frontmatter.date)} </span>
             </p>
           </header>
+          <Spacer height="2rem" />
 
           <section
             dangerouslySetInnerHTML={{ __html: post.html }}
             itemProp="description"
           />
 
-          <hr />
-
           <footer></footer>
         </article>
-        <nav className="post-nav">
+
+        {/* <nav className="post-nav">
           <ul
             style={{
               display: `flex`,
@@ -122,7 +126,7 @@ const PostTemplate = ({
               )}
             </li>
           </ul>
-        </nav>
+        </nav> */}
       </PostLayout>
     </Layout>
   );
@@ -131,7 +135,7 @@ const PostTemplate = ({
 export const Head = ({ data: { markdownRemark: post } }) => {
   return (
     <Seo
-      title={post.frontmatter.title}
+      title={"ml5.js | " + post.frontmatter.title}
       description={post.frontmatter.description || post.excerpt}
     />
   );
@@ -158,6 +162,7 @@ export const pageQuery = graphql`
         title
         date
         description
+        keywords
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

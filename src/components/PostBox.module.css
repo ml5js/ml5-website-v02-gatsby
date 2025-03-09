@@ -1,4 +1,4 @@
-.projectBox {
+.postBox {
   display: flex;
   align-items: flex-start;
   gap: 2rem;
@@ -19,22 +19,21 @@
   position: relative;
 }
 
-.projectBox:hover {
-  transform: scale(1.02);
+.postBox:hover {
+  transform: scale(1.01);
   /* background-color: #eaeaea; */
 }
 
-.projectBox img {
-  width: 160px;
-  /* Small thumbnail */
-  height: 80px;
+.postBox img {
+  width: 120px;
+  height: 120px;
   object-fit: cover;
   border-radius: var(--rounded-corner);
   flex-shrink: 0;
   /* Prevents shrinking */
 }
 
-.projectBox header {
+.postBox header {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,24 +41,31 @@
   /* Allow text to take available space */
 }
 
-.projectBox h2 {
+.postBox h2 {
   font-size: var(--fontSize-3);
   margin: 0;
-  color: var(--color-primary);
+  color: var(--color-text);
 }
 
-.projectBox p {
+.postBox h3 {
+  font-size: var(--fontSize-4);
+  margin: 0.2rem 0 0.5rem 0;
+  color: var(--color-text-light);
+}
+
+.postBox p {
   font-size: var(--fontSize-1);
   color: #444;
   margin: var(--spacing-1) 0 0 0;
 }
 
-.projectBox:hover h2 {
+
+.postBox:hover h2 {
   color: var(--color-secondary);
 }
 
 /* Adjustments for better spacing and readability */
-.projectBox+.projectBox {
+.postBox+.postBox {
   margin-top: var(--spacing-3);
   /* Adds space between items */
 }

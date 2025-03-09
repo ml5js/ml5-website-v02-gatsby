@@ -1,6 +1,6 @@
 ---
-templateKey: blog-post
-title: ml5.js
+templateKey: #blog-post # <-- Uncomment this so that this post can be included in the blog list
+title: ml5 blog post template
 author: ml5.js
 description: Friendly Machine Learning for the Web
 keywords: machine learning
