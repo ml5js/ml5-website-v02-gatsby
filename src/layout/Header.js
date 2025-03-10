@@ -6,6 +6,8 @@ import {
   navbar,
   logo,
   menu,
+  menuToggle,
+  menuActive,
 } from '../styles/Header.module.css';
 
 const Header = () => {
@@ -21,11 +23,14 @@ const Header = () => {
       borderBottom: "#ddd solid 1px",
       height: "3.5rem", // reduced height after scrolling
       transition: "height 0.3s ease",
+      zIndex: 100,
     }
   };
 
   // detect if page is scrolled
   const [isScrolled, checkIsScrolled] = useState(false);
+  // state for mobile menu toggle
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       // check if page is scrolled more than 30 pixels
@@ -37,9 +42,14 @@ const Header = () => {
     };
   }, []);
 
+  // toggle menu open/closed
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header>
-      <nav className={navbar} style={isScrolled ? styles.navbarNarrow : styles.navbarWide}>
+      <nav className={navbar} style={isScrolled ? styles.navbarNarrow : isMenuOpen ? styles.navbarNarrow : styles.navbarWide}>
         <div className={logo}>
           <Button
             children="ml5.js"
@@ -47,10 +57,23 @@ const Header = () => {
             fontSize="1.5rem"
             txtColor="var(--color-primary)"
             bgColor="var(--color-transparent)"
-            padding="0.3rem 0.8rem"
+            padding="0.1rem 0.8rem"
           />
+
+          {/* Mobile menu toggle button */}
+          <button
+            type="button"
+            className={menuToggle}
+            onClick={toggleMenu}
+            aria-label="Toggle navigation"
+            aria-expanded={isMenuOpen}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
-        <div className={menu}>
+        <div className={`${menu} ${isMenuOpen ? menuActive : ''}`}>
           <Button
             children="Getting Started"
             url="https://docs.ml5js.org/#/"
