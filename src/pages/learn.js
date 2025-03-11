@@ -11,7 +11,9 @@ const LearnPage = ({ data }) => {
   const tutorials = data.allMarkdownRemark.nodes.filter(
     (node) => node.frontmatter.templateKey === "tutorial"
   );
+
   tutorials.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
+
 
   const styles = {
     postContainer: {
@@ -28,11 +30,11 @@ const LearnPage = ({ data }) => {
       <IframeComponent />
       <h1>Learn</h1>
       <p>
-        Learning machine learning is an exciting journey that we can explore together. 
-        The ml5.js Learn page provides tutorials, articles, and videos covering 
-        various machine learning and creative coding topics. This is a community 
-        space where practitioners share knowledge and learn from each other. 
-        If you have a machine learning insight or experience that could help others, 
+        Learning machine learning is an exciting journey that we can explore together.
+        The ml5.js Learn page provides tutorials, articles, and videos covering
+        various machine learning and creative coding topics. This is a community
+        space where practitioners share knowledge and learn from each other.
+        If you have a machine learning insight or experience that could help others,
         please consider submitting a tutorial using the form below.
       </p>
       <Spacer height="2rem" />
@@ -96,6 +98,7 @@ export const query = graphql`
             }
           }
           externalLink
+          date
           tags
           featured
         }
