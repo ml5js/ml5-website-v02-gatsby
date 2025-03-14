@@ -1,5 +1,5 @@
 ---
-templateKey: #blog-post
+templateKey: blog-post
 title: COSA x NYU Machine Learning Tools for Creative Coding
 author: ml5.js
 description: Join us at ITP for an informal series of talks and workshops exploring open-source machine learning tools for creative coding, presented in partnership with the Clinic for Open Source Arts (COSA)!
