@@ -3,92 +3,91 @@ templateKey: #blog-post # <-- Uncomment this so that this post can be included i
 title: Releasing Version 1.0 of ml5.js Friendly Machine Learning for the Web
 author: ml5.js
 description: Friendly Machine Learning for the Web
-keywords: 
-image: "./images/_thumb.jpg"
+keywords:
+image: './images/_thumb.jpg'
 externalLink: (link)
-date: "2025-04-04" # YYYY-MM-DD or YYYY-MM-DD to YYYY-MM-DD or YYYY-MM-DD, YYYY-MM-DD, YYYY-MM-DD
+date: '2025-04-04' # YYYY-MM-DD or YYYY-MM-DD to YYYY-MM-DD or YYYY-MM-DD, YYYY-MM-DD, YYYY-MM-DD
 tags:
   - HandPose
 featured: false
 ---
 
 ## Introduction
-Last summer 2024, the ml5.js team released 1.0 version of ml5.js, the friendly machine learning library for the web built. Releasing the new version included updates not only the library itself but many aspects of the ml5.js ecosystem including this website to first launch our blog. Below you'll find learn more about the history of ml5.js, the release process and the updates, and learn how to get involved and get involved with what's next!  
 
+In August 2024, the ml5.js team released version 1.0, known as ml5.js "next generation." This release represented a significant transformation of the library, featuring updated models, the deprecation of unmaintained or rarely used features, and simplification and consistency improvements to the API. Below, you'll explore more about the history of ml5.js, details of the release process and updates, and ways you can join the community to shape the library’s future!
 
 ## Before 1.0: Launching ml5.js
-The ml5.js project launched in 2018 with a mission: to bring a friendly and neighborly approach to machine learning in creative coding. 
 
-This first release aimed to help students both learn the complete process of training machine learning models as well as engage with useful pre-trained models for playful, experimental, and educational applications of machine learning, all without requiring deep expertise. vThe library emerged from a collaboration with Google’s Big Picture Research Group, whose funding and research developing deeplearn.js (which later became TensorFlow.js) made it possible. 
+The ml5.js project launched in 2018 with a mission to bring a friendly, approachable, and inclusive perspective to machine learning within the creative coding community..
 
-Drawing inspiration from p5.js and The Processing Foundation, the library was built first and foremost with beginners, students, and artists in mind. This first release featured pre-trained models like MobileNet for image classification and PoseNet for body tracking, alongside a foundational module for training your own neural network model. 
+This first release aimed to help students both learn both the fundamentals of training machine learning models as well as explore creative, experimental, and educational applications of pre-trained models, without needing extensive prior knowledge. The library emerged from a collaboration with Google’s Big Picture Research Group, which provided crucial funding and research in developing deeplearn.js (which later became TensorFlow.js).
 
+Drawing inspiration from p5.js and The Processing Foundation, the library was built first and foremost with beginners, students, and artists in mind. This first release featured pre-trained models like MobileNet for image classification and PoseNet for body tracking, along with a friendly API for training a custom neural network model with your own data.
 
 What began as a project maintained by students, researchers, and faculty at ITP has blossomed into a worldwide collaborative effort.
 
-
 ## Building ml5.js next generation
-Over the years, ml5.js expanded its capabilities, introducing new models like Handpose and Facemesh while refining the library to keep pace with updates in TensorFlow.js. The 0.6.0 release in 2020 marked a significant leap, improving documentation, performance, and browser compatibility. 
 
-By 2021, the ml5.js community formalized its commitment for critical and ethical applications of machine learning with a new Code of Conduct and License. As machine learning tools evolved, it became clear that ml5.js needed a major update to remain relevant. 
+Over the years, ml5.js expanded its capabilities, introducing new models like Handpose and Facemesh aligning the library with updates in TensorFlow.js. The 0.6.0 release in 2020 marked a significant leap with improved documentation, performance, and browser compatibility.
 
-In 2023, thanks to a collaboration with students and faculty at NYU Shanghai, development began on the “next generation” of ml5.js, with a focus on upgrading to TensorFlow.js 4.2.0, integrating faster and more accurate models,  improving the API for beginners, and enhancing accessibility. 
+In 2021, [in collaboration with the Technology Law & Policy Clinic at NYU Law School](https://www.nyuengelberg.org/news/technology-law-and-policy-clinic-supports-ml5-js-in-developing-a-new-ethical-license-and-coc/), the ml5.js community took a significant step by formalizing its commitment to ethical machine learning applications through the introduction of a [new Code of Conduct and a dedicated software license](https://github.com/ml5js/Code-of-Conduct). This initiative aimed to ensure that projects utilizing ml5.js adhered to principles promoting positive and responsible use. Complementing this, the software license mandates compliance with the Code of Conduct, effectively linking ethical considerations to the legal use of the software.
+
+In 2023, in collaboration with students and faculty at NYU Shanghai, development began on the "next generation" of ml5.js, emphasizing an upgrade to TensorFlow.js 4.22.0, integration of faster and more accurate models, improvements to the beginner-friendly API, and enhanced accessibility.
+
 We’re excited to finally introduce ml5.js 1.0, a milestone release that we hope brings a fresh foundation for creative coding with machine learning.
 
+## Releasing ml5.js 1.0
 
-## Releasing ml5.js 1.0  
-Below are highlights of the updates that are included in the ml5.js1.0 release from members of the team from NYU ITP/IMA and NYU Shanghai
-
+Below are highlights from the ml5.js 1.0 release, featuring contributions from NYU ITP/IMA and NYU Shanghai.
 
 ### Library Build and Technical Updates
-* We created a new Github repository for the 1.0 codebase, called ml5-next-gen
-* For package managers, switched from NPM to yarn to better handle TFJS dependencies
-* Updated to webpack version 5
 
+- Created a new GitHub repository named `ml5-next-gen` for the 1.0 codebase, providing a fresh start to streamline development and simplify maintenance.
+- Switched package management from NPM to Yarn for improved handling of TensorFlow.js dependencies.
+- Updated the build system to Webpack version 5.
 
-### A new website 
-* We reduced external dependencies, simplified the code, and reduced technical complexity to
-enable contributions from developers with basic web development experience
-simplify the future maintenance
-    * The main Home page, Learn, Community, and About were built using the Gatsby framework.
-    * The model reference pages utilized Docsify to create more manageable and accessible documentation.
-    
-* We updated our content and documentation for clarity and beginner-friendliness
-    * A beginner-friendly Getting Started page with step-by-step instructions and illustrative screenshots.
-    * Reference docs included live testing on the pages.
-    * Step-by-step, line-by-line code explanation to reduce learning curves.
-    * A glossary explained ML/AI terminology that encourages everyone to contribute
-* The new visual design adopts a hands-on creative style to make it more inviting, incorporating illustrations by student artist Xiaozao Wang.
+### A New Website
 
+- Simplified the website's codebase by reducing external dependencies and technical complexity, making it easier for developers with basic web development experience to contribute and maintain.
+- Built the main pages (Home, Learn, Community, About) using the Gatsby framework for improved performance and ease of updates.
+- Utilized Docsify for model reference pages to enhance manageability and accessibility of documentation.
+- Enhanced content and documentation to better support beginners:
+  - Introduced a beginner-friendly "Getting Started" page with step-by-step instructions and illustrative screenshots.
+  - Integrated live examples into reference documentation for immediate testing and feedback.
+  - Provided detailed, line-by-line explanations of example code to ease the learning curve.
+  - Created an approachable glossary defining ML/AI terminology to encourage broader community contributions.
+- Adopted an inviting, hands-on creative visual style featuring illustrations by student artist Xiaozao Wang.
 
 ### Accessibility Updates
-* Semantic HTML structure, including descriptive alternative text on images, prioritizing screen reader optimization and applying AAA contrast standards across the website
-    
-### New and Updated Models 
-* Upgraded to TensorFlow.js version 4.22.0 with WebGPU backend support from 1.7.0
-* Replaced older models with newer, faster MediaPipe and TensorFlow alternatives:
-    * BodyPose: Multi-person detection with named keypoints and 3D keypoints with BlazePose. 
-    * HandPose: Multiple hand tracking with named keypoints and 3D keypoints
-    * FaceMesh: Multi-person facial tracking with named keypoints and 3D keypoints
-    * BodySegmentation: Improved segmentation and added selfie segmentation capabilities. 
-* Maintained core functionality:
-    * Image classification (MobileNet) & Teachable Machine
-    * Sound classification
 
+- Improved semantic HTML structure to enhance screen reader compatibility.
+- Added descriptive alternative text to all images for better accessibility.
+- Applied AAA contrast standards throughout the website to ensure readability and visual clarity.
 
- ### Ethics and Bias
- * We continued to update the Code of Conduct to align with the new features of ml5.js, ensuring responsible use and minimizing potential misuse.
-  * Community Statement: https://ml5js.org/about/
-  * Code of Conduct: https://github.com/ml5js/Code-of-Conduct
+### New and Updated Models
 
+- Upgraded to TensorFlow.js version 4.22.0, including WebGPU backend support starting from version 1.7.0.
+- Replaced older models with faster and more accurate alternatives from MediaPipe and TensorFlow:
+  - **BodyPose:** Multi-person detection with named keypoints and 3D coordinates using BlazePose.
+  - **HandPose:** Multi-hand tracking with named keypoints and 3D coordinates.
+  - **FaceMesh:** Multi-face tracking with named keypoints and 3D coordinates.
+  - **BodySegmentation:** Enhanced segmentation quality with additional selfie segmentation capabilities.
+- Introduced new `detectStart()` functions to manage continuous detection loops internally, simplifying model usage and preventing recursive loop issues.
+- Continued support for core functionalities:
+  - Image classification using MobileNet and Teachable Machine.
+  - Sound classification.
+
+### Ethics and Bias
+
+- Updated the ml5.js [Code of Conduct](https://github.com/ml5js/Code-of-Conduct) to align with new features and functionality, reinforcing our commitment to responsible use and reducing potential for misuse.
+- Read more about our ethical framework in the [Community Statement](https://ml5js.org/about/).
 
 ## What’s Next & How to Get Involved
-Many of the updates for ml5.js 1.0 are ongoing including work on our Code of Conduct, library and model updates, and more opportunities for community on our website. All are welcome to contribute to ml5! 
 
+Many of the updates for ml5.js 1.0 are ongoing, including work on the Code of Conduct, library and model updates, and more opportunities to share community resource on the website. All are invited to contribute to ml5.js!
 
-* Looking for the old version or running into errors with ml5.js prior to 1.0?: Checkout our [FAQ](https://docs.ml5js.org/#/welcome/faq?id=what-happened-to-older-ml5js-releases) and related [Github issue](https://github.com/ml5js/ml5-next-gen/issues/167)
-* Want to learn more about ml5.js?
-    * Watch this  [Presentation from Aidan Nelson and Yu Lee](https://youtu.be/LHhSxtgyuUw) 
+- Looking for the old version or running into errors with ml5.js prior to 1.0?: Checkout our [FAQ](https://docs.ml5js.org/#/welcome/faq?id=what-happened-to-older-ml5js-releases) and related [Github issue](https://github.com/ml5js/ml5-next-gen/issues/167)
+- Want to learn more about ml5.js?
+  - Watch this [presentation by Aidan Nelson and Yu Lee](https://youtu.be/LHhSxtgyuUw).
 
-
-Thank you to the ml5.js team and ...for contributing to this blog post. 
+Thank you to all contributors from the ml5.js community for making this release possible! contributing to this blog post.
