@@ -129,6 +129,10 @@ a:hover {
   background-color: var(--link-hover-bg-color);
 }
 
+.post h2 {
+  margin-top: 3.5rem;
+}
+
 /* blink for ScrollDownIndicator */
 @keyframes blink {
   0% {

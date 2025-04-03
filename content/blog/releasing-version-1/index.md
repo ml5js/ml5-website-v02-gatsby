@@ -1,16 +1,18 @@
 ---
-templateKey: #blog-post # <-- Uncomment this so that this post can be included in the blog list
+templateKey: blog-post
 title: Releasing Version 1.0 of ml5.js Friendly Machine Learning for the Web
 author: ml5.js
 description: Friendly Machine Learning for the Web
-keywords:
-image: './images/_thumb.jpg'
-externalLink: (link)
+keywords: ml5.js Latest Update
+image: './images/_thumb.png'
+externalLink: (none)
 date: '2025-04-04' # YYYY-MM-DD or YYYY-MM-DD to YYYY-MM-DD or YYYY-MM-DD, YYYY-MM-DD, YYYY-MM-DD
 tags:
-  - HandPose
+  - (none)
 featured: false
 ---
+
+![ml5.js new website](./images/main.png)
 
 ## Introduction
 
