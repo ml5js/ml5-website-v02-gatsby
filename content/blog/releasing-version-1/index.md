@@ -20,7 +20,11 @@ In August 2024, the ml5.js team released version 1.0, known as ml5.js "next gene
 
 ## Before 1.0: Launching ml5.js
 
-The ml5.js project launched in 2018 with a mission to bring a friendly, approachable, and inclusive perspective to machine learning within the creative coding community..
+![animation of class about ML](./images/2018-animation.gif)
+
+<figcaption>animated comic from 2018 ml5.js launch by Elizabeth Ferguson</figcaption>
+
+The ml5.js project launched in 2018 with a mission to bring a friendly, approachable, and inclusive perspective to machine learning within the creative coding community.
 
 This first release aimed to help students both learn both the fundamentals of training machine learning models as well as explore creative, experimental, and educational applications of pre-trained models, without needing extensive prior knowledge. The library emerged from a collaboration with Google’s Big Picture Research Group, which provided crucial funding and research in developing deeplearn.js (which later became TensorFlow.js).
 
@@ -32,13 +36,25 @@ What began as a project maintained by students, researchers, and faculty at ITP 
 
 Over the years, ml5.js expanded its capabilities, introducing new models like Handpose and Facemesh aligning the library with updates in TensorFlow.js. The 0.6.0 release in 2020 marked a significant leap with improved documentation, performance, and browser compatibility.
 
+![Facemesh test from ml5.js in 2020](./images/facemesh.jpg)
+
+<figcaption>Bomani Oseni McClendon testing Facemesh. Original photo by Edrick Chu.</figcaption>
+
 In 2021, [in collaboration with the Technology Law & Policy Clinic at NYU Law School](https://www.nyuengelberg.org/news/technology-law-and-policy-clinic-supports-ml5-js-in-developing-a-new-ethical-license-and-coc/), the ml5.js community took a significant step by formalizing its commitment to ethical machine learning applications through the introduction of a [new Code of Conduct and a dedicated software license](https://github.com/ml5js/Code-of-Conduct). This initiative aimed to ensure that projects utilizing ml5.js adhered to principles promoting positive and responsible use. Complementing this, the software license mandates compliance with the Code of Conduct, effectively linking ethical considerations to the legal use of the software.
+
+![ml5.js workshop at The Young Women’s Leadership School of the Bronx](./images/tywls-workshop.jpg)
+
+<figcaption>Image from an ml5.js workshop at The Young Women’s Leadership School of the Bronx</figcaption>
 
 In 2023, in collaboration with students and faculty at NYU Shanghai, development began on the "next generation" of ml5.js, emphasizing an upgrade to TensorFlow.js 4.22.0, integration of faster and more accurate models, improvements to the beginner-friendly API, and enhanced accessibility.
 
 We’re excited to finally introduce ml5.js 1.0, a milestone release that we hope brings a fresh foundation for creative coding with machine learning.
 
 ## Releasing ml5.js 1.0
+
+![audience at ml5.js 1.0 launch](./images/ml5-1-launch.jpg)
+
+<figcaption>Attendees at the 2024 ml5.js 1.0 release workshop</figcaption>
 
 Below are highlights from the ml5.js 1.0 release, featuring contributions from NYU ITP/IMA and NYU Shanghai.
 
@@ -67,6 +83,10 @@ Below are highlights from the ml5.js 1.0 release, featuring contributions from N
 - Applied AAA contrast standards throughout the website to ensure readability and visual clarity.
 
 ### New and Updated Models
+
+![Bubble World by Sihan Zhang](./images/bubble-world.gif)
+
+<figcaption>Bubble World by Sihan Zhang</figcaption>
 
 - Upgraded to TensorFlow.js version 4.22.0, including WebGPU backend support starting from version 1.7.0.
 - Replaced older models with faster and more accurate alternatives from MediaPipe and TensorFlow:
