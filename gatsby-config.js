@@ -35,6 +35,8 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1000,
+              linkImagesToOriginal: false,
+              showCaptions: true,
             },
           },
           // Copies any linked files that Sharp can’t process (like GIFs)

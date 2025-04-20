@@ -36,15 +36,11 @@ What began as a project maintained by students, researchers, and faculty at ITP 
 
 Over the years, ml5.js expanded its capabilities, introducing new models like Handpose and Facemesh aligning the library with updates in TensorFlow.js. The 0.6.0 release in 2020 marked a significant leap with improved documentation, performance, and browser compatibility.
 
-![Facemesh test from ml5.js in 2020](./images/facemesh.jpg)
-
-<figcaption>Bomani Oseni McClendon testing Facemesh. Original photo by Edrick Chu.</figcaption>
+![Bomani Oseni McClendon testing Facemesh. Original photo by Edrick Chu.](./images/facemesh.jpg)
 
 In 2021, [in collaboration with the Technology Law & Policy Clinic at NYU Law School](https://www.nyuengelberg.org/news/technology-law-and-policy-clinic-supports-ml5-js-in-developing-a-new-ethical-license-and-coc/), the ml5.js community took a significant step by formalizing its commitment to ethical machine learning applications through the introduction of a [new Code of Conduct and a dedicated software license](https://github.com/ml5js/Code-of-Conduct). This initiative aimed to ensure that projects utilizing ml5.js adhered to principles promoting positive and responsible use. Complementing this, the software license mandates compliance with the Code of Conduct, effectively linking ethical considerations to the legal use of the software.
 
-![ml5.js workshop at The Young Women’s Leadership School of the Bronx](./images/tywls-workshop.jpg)
-
-<figcaption>Image from an ml5.js workshop at The Young Women’s Leadership School of the Bronx</figcaption>
+![Image from an ml5.js workshop at The Young Women’s Leadership School of the Bronx](./images/tywls-workshop.jpg)
 
 In 2023, in collaboration with students and faculty at NYU Shanghai, development began on the "next generation" of ml5.js, emphasizing an upgrade to TensorFlow.js 4.22.0, integration of faster and more accurate models, improvements to the beginner-friendly API, and enhanced accessibility.
 
@@ -52,9 +48,7 @@ We’re excited to finally introduce ml5.js 1.0, a milestone release that we hop
 
 ## Releasing ml5.js 1.0
 
-![audience at ml5.js 1.0 launch](./images/ml5-1-launch.jpg)
-
-<figcaption>Attendees at the 2024 ml5.js 1.0 release workshop</figcaption>
+![Attendees at the 2024 ml5.js 1.0 release workshop](./images/ml5-1-launch.jpg)
 
 Below are highlights from the ml5.js 1.0 release, featuring contributions from NYU ITP/IMA and NYU Shanghai.
 
