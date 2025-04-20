@@ -6,7 +6,7 @@ description: Friendly Machine Learning for the Web
 keywords: ml5.js Latest Update
 image: './images/_thumb.png'
 externalLink: (none)
-date: '2025-04-04' # YYYY-MM-DD or YYYY-MM-DD to YYYY-MM-DD or YYYY-MM-DD, YYYY-MM-DD, YYYY-MM-DD
+date: '2025-04-21' # YYYY-MM-DD or YYYY-MM-DD to YYYY-MM-DD or YYYY-MM-DD, YYYY-MM-DD, YYYY-MM-DD
 tags:
   - (none)
 featured: false
@@ -26,7 +26,7 @@ In August 2024, the ml5.js team released version 1.0, known as ml5.js "next gene
 
 The ml5.js project launched in 2018 with a mission to bring a friendly, approachable, and inclusive perspective to machine learning within the creative coding community.
 
-This first release aimed to help students both learn both the fundamentals of training machine learning models as well as explore creative, experimental, and educational applications of pre-trained models, without needing extensive prior knowledge. The library emerged from a collaboration with Google’s Big Picture Research Group, which provided crucial funding and research in developing deeplearn.js (which later became TensorFlow.js).
+This first release aimed to help students both learn the fundamentals of training machine learning models as well as explore creative, experimental, and educational applications of pre-trained models, without needing extensive prior knowledge. The library emerged from a collaboration with Google’s Big Picture Research Group, which provided crucial funding and research in developing deeplearn.js (which later became TensorFlow.js).
 
 Drawing inspiration from p5.js and The Processing Foundation, the library was built first and foremost with beginners, students, and artists in mind. This first release featured pre-trained models like MobileNet for image classification and PoseNet for body tracking, along with a friendly API for training a custom neural network model with your own data.
 
@@ -38,7 +38,7 @@ Over the years, ml5.js expanded its capabilities, introducing new models like Ha
 
 ![Bomani Oseni McClendon testing Facemesh. Original photo by Edrick Chu.](./images/facemesh.jpg)
 
-In 2021, [in collaboration with the Technology Law & Policy Clinic at NYU Law School](https://www.nyuengelberg.org/news/technology-law-and-policy-clinic-supports-ml5-js-in-developing-a-new-ethical-license-and-coc/), the ml5.js community took a significant step by formalizing its commitment to ethical machine learning applications through the introduction of a [new Code of Conduct and a dedicated software license](https://github.com/ml5js/Code-of-Conduct). This initiative aimed to ensure that projects utilizing ml5.js adhered to principles promoting positive and responsible use. Complementing this, the software license mandates compliance with the Code of Conduct, effectively linking ethical considerations to the legal use of the software.
+In 2021, in collaboration with the Technology Law & Policy Clinic at NYU Law School, the ml5.js community took a significant step by formalizing its commitment to ethical machine learning applications through the introduction of a [new Code of Conduct and a dedicated software license](https://github.com/ml5js/Code-of-Conduct). This initiative aimed to ensure that projects utilizing ml5.js adhered to principles promoting positive and responsible use. Complementing this, the software license mandates compliance with the Code of Conduct, effectively linking ethical considerations to the legal use of the software.
 
 ![Image from an ml5.js workshop at The Young Women’s Leadership School of the Bronx](./images/tywls-workshop.jpg)
 
