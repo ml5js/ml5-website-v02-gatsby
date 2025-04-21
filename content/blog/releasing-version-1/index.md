@@ -48,7 +48,13 @@ We’re excited to finally introduce ml5.js 1.0, a milestone release that we hop
 
 ## Releasing ml5.js 1.0
 
-![Attendees at the 2024 ml5.js 1.0 release workshop](./images/ml5-1-launch.jpg)
+![Dan Shiffman speaking at ml5.js 1.0 release workshop](./images/ml5-1-launch-1.jpeg)
+
+![Slide presentation celebrating "ml5.js 1.0" with confetti](./images/ml5–1-launch-2.jpeg)
+
+![Attendees listening attentively during the workshop #1](./images/ml5-1-launch-3.jpeg)
+
+![Attendees listening attentively during the workshop #2](./images/ml5–1-launch-4.jpeg)
 
 Below are highlights from the ml5.js 1.0 release, featuring contributions from NYU ITP/IMA and NYU Shanghai.
 
