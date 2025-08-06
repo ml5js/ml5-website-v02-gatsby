@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Contributing to ml5.js: From Docsify Plugins to Soft Interactions
+title: "Contributing to ml5.js: From Docsify Plugins to Soft Interactions"
 author: Yafira Martinez
 description: UX, UI, documentation, and creative coding contributions to the ml5.js ecosystem
 keywords: machine learning, open source, ml5.js, Docsify, documentation, creative coding, contribution
