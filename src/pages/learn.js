@@ -62,7 +62,7 @@ const LearnPage = ({ data }) => {
       </p>
       <Button
         children="Submit"
-        url="https://docs.google.com/forms/d/e/1FAIpQLSdPz0ICzTSVdLAteIKwJ-zFzX6dX5l3dOpjWGzm6LIZutKvlA/viewform"
+        url="https://forms.gle/5EpwYabG8hLn4p926"
         target="_blank"
         fontSize="1.1rem"
         borderStyle="solid"

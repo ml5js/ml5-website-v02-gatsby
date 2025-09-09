@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: "Using ml5.js with p5.js 2.0: Now with Async Model Constructors"
-author: ml5.js
+author: Bairui Su
 description: Load models using async setup
 keywords: ml5.js Latest Update
 image: "./images/_thumb.png"
