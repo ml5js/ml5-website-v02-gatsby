@@ -1,10 +1,10 @@
 ---
 templateKey: blog-post
 title: Bringing Back Object Detector to ml5
-author: Jin
-description: A detailed log of Summer 2025 project
+author: Yujin Yi
+description: A log of summer 2025 project
 keywords: Object Detection, machine learning
-image: "./images/_thumb.jpg"
+image: "./images/summer.png"
 externalLink: (link)
 date: "2025-08-01" # YYYY-MM-DD or YYYY-MM-DD to YYYY-MM-DD or YYYY-MM-DD, YYYY-MM-DD, YYYY-MM-DD
 tags:
@@ -60,9 +60,9 @@ As the role continues into this coming fall, here are a list of things I will be
 
 <br/>
 
-I hope ml5.obejctDectector helps and inspires creators to view and use machine learning as a tool!
+I hope ml5.obejctDectector helps and inspires more people to view and use machine learning as a creative tool!
 
 <br/>
 
 ---
-<span style="color: gray;">[Jin Yi](https://codingeffects.com/) is a frontend developer and a sports enthusiast. She is part of ml5's research team as a graduate student at NYU ITP.</span>
+<span style="color: gray;">[Yujin Yi](https://codingeffects.com/) is a frontend developer and a sports enthusiast. She is part of ml5's research team as a graduate student at NYU ITP.</span>
