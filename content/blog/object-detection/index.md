@@ -1,243 +1,68 @@
 ---
-templateKey: #blog-post # <-- Uncomment this so that this post can be included in the blog list
-title: ml5 blog post template
-author: ml5.js
-description: Friendly Machine Learning for the Web
-keywords: machine learning
+templateKey: blog-post
+title: Bringing Back Object Detector to ml5
+author: Jin
+description: A detailed log of Summer 2025 project
+keywords: Object Detection, machine learning
 image: "./images/_thumb.jpg"
 externalLink: (link)
-date: "2015-05-28" # YYYY-MM-DD or YYYY-MM-DD to YYYY-MM-DD or YYYY-MM-DD, YYYY-MM-DD, YYYY-MM-DD
+date: "2025-08-01" # YYYY-MM-DD or YYYY-MM-DD to YYYY-MM-DD or YYYY-MM-DD, YYYY-MM-DD, YYYY-MM-DD
 tags:
-  - HandPose
+  - (none)
 featured: false
 ---
 
-This is a dummy text from Gatsby starter blog!
+![Example of running ml5.objectDetector on an image of me](./images/summer.png)
 
-Image:
+## Introduction
 
-![Chinese Salty Egg](./images/_main.jpg)
+This Summer 2025, I had an opportunity to work with the ml5 team and my mission was to bring back object detection to ml5. Object detection was not included in ml5 1.0 for maintenance issue, which left some users asking for its return.
 
-An iframe for video embed:
+![[An issue from 2024](https://github.com/ml5js/ml5-next-gen/issues/165)](./images/issue.png)
 
-<iframe width="800" height="450" src="//www.youtube.com/embed/vfNHdVbE-l4?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+In this post, I want to share my journey. I hope this serves as a helpful resource to any future contributor, especially those who are new to open source projects.
 
-Oh, and here's a great quote from this Wikipedia on
-[salted duck eggs](https://en.wikipedia.org/wiki/Salted_duck_egg).
+## Deliverables
+Here's a list of deliverables :
 
-> A salted duck egg is a Chinese preserved food product made by soaking duck
-> eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-> supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-> charcoal paste. The eggs may also be sold with the salted paste removed,
-> wrapped in plastic, and vacuum packed. From the salt curing process, the
-> salted duck eggs have a briny aroma, a gelatin-like egg white and a
-> firm-textured, round yolk that is bright orange-red in color.
+- [Code] A refactored [legacy code](https://github.com/ml5js/ml5-library/tree/main/src/ObjectDetector) that works with ml5 1.0 and is scalable to include more models like Transformers.js
+- [Code] Example p5js codes for 3 types of source : webcam, image, video.
+- [Docs] Object Detection Docs for ml5 reference website.
 
-You can also write code blocks here!
+For anyone interested, please take a look at the full [Pull Request](https://github.com/ml5js/ml5-next-gen/pull/257).
 
-```js
-const saltyDuckEgg = "chinese preserved food product";
-```
+## Process
 
-| Number | Title                                    | Year |
-| :----- | :--------------------------------------- | ---: |
-| 1      | Harry Potter and the Philosopher’s Stone | 2001 |
-| 2      | Harry Potter and the Chamber of Secrets  | 2002 |
-| 3      | Harry Potter and the Prisoner of Azkaban | 2004 |
+During the first half of the research, I focused more on understanding the fundamentals of machine learning. I took this time as an opportunitiy to revisit concepts introduced in Daniel Shiffman's class called [ML for Creative Coding](https://github.com/shiffman/ML-for-Creative-Coding).
 
-[View raw (TEST.md)](https://raw.github.com/adamschwartz/github-markdown-kitchen-sink/master/README.md)
+<br/>
 
-This is a paragraph.
+Here are some of the things I made :
 
-    This is a paragraph.
+![Caption](./images/video1.gif)
+[Demo of Tensorflow.js Cocossd] The purpose for this demo was to make things explicit. So I distinguished the three file types and displayed raw data.
 
-# Header 1
+<br/>
 
-## Header 2
+![Caption](./images/video2.gif)
+[Interactive Animations] I found machine learning concepts rather abstract, so I tried to demystify them by turning them into interactive sketches.
 
-    Header 1
-    ========
 
-    Header 2
-    --------
+## Next
+As the role continues into this coming fall, here are a list of things I will be focusing on :
 
-# Header 1
+- [Code] Introduce more models (Transformers.js) into Object Detector.
+- [Docs] Research further and make suggestions about including [ml5.js Model and Data Provenance Section](https://github.com/ellennickles/ml5js-model-and-data-provenance-project) section on the website.
+- [Docs] Internal doc for the dev team (esp. for onboarding)
+- [Code] Create examples / projects with Object Detector (esp. in the domain of Sports)
 
-## Header 2
+![Can't wait to unlock creative possibilities with object detection!](./images/concept.png)
 
-### Header 3
+<br/>
 
-#### Header 4
+I hope ml5.obejctDectector helps and inspires creators to view and use machine learning as a tool!
 
-##### Header 5
-
-###### Header 6
-
-    # Header 1
-    ## Header 2
-    ### Header 3
-    #### Header 4
-    ##### Header 5
-    ###### Header 6
-
-# Header 1
-
-## Header 2
-
-### Header 3
-
-#### Header 4
-
-##### Header 5
-
-###### Header 6
-
-    # Header 1 #
-    ## Header 2 ##
-    ### Header 3 ###
-    #### Header 4 ####
-    ##### Header 5 #####
-    ###### Header 6 ######
-
-> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-
-    > Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-
-> ## This is a header.
->
-> 1. This is the first list item.
-> 2. This is the second list item.
->
-> Here's some example code:
->
->     Markdown.generate();
-
-    > ## This is a header.
-    > 1. This is the first list item.
-    > 2. This is the second list item.
-    >
-    > Here's some example code:
-    >
-    >     Markdown.generate();
-
-- Red
-- Green
-- Blue
-
-* Red
-* Green
-* Blue
-
-- Red
-- Green
-- Blue
-
-```markdown
-- Red
-- Green
-- Blue
-
-* Red
-* Green
-* Blue
-
-- Red
-- Green
-- Blue
-```
-
-- `code goes` here in this line
-- **bold** goes here
-
-```markdown
-- `code goes` here in this line
-- **bold** goes here
-```
-
-1. Buy flour and salt
-1. Mix together with water
-1. Bake
-
-```markdown
-1. Buy flour and salt
-1. Mix together with water
-1. Bake
-```
-
-1. `code goes` here in this line
-1. **bold** goes here
-
-```markdown
-1. `code goes` here in this line
-1. **bold** goes here
-```
-
-Paragraph:
-
-    Code
-
-<!-- -->
-
-    Paragraph:
-
-        Code
+<br/>
 
 ---
-
----
-
----
-
----
-
----
-
-    * * *
-
-    ***
-
-    *****
-
-    - - -
-
-    ---------------------------------------
-
-This is [an example](http://example.com "Example") link.
-
-[This link](http://example.com) has no title attr.
-
-This is [an example][id] reference-style link.
-
-[id]: http://example.com "Optional Title"
-
-    This is [an example](http://example.com "Example") link.
-
-    [This link](http://example.com) has no title attr.
-
-    This is [an example] [id] reference-style link.
-
-    [id]: http://example.com "Optional Title"
-
-_single asterisks_
-
-_single underscores_
-
-**double asterisks**
-
-**double underscores**
-
-    *single asterisks*
-
-    _single underscores_
-
-    **double asterisks**
-
-    __double underscores__
-
-This paragraph has some `code` in it.
-
-    This paragraph has some `code` in it.
-
-![Alt Text](https://via.placeholder.com/200x50 "Image Title")
-
-    ![Alt Text](https://via.placeholder.com/200x50 "Image Title")
+<span style="color: gray;">[Jin Yi](https://codingeffects.com/) is a frontend developer and a sports enthusiast. She is part of ml5's research team as a graduate student at NYU ITP.</span>
