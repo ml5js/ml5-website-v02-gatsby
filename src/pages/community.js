@@ -9,9 +9,6 @@ import IframeComponent from "../components/IframeComponent";
 import { graphql } from "gatsby";
 
 const CommunityPage = ({ data, location }) => {
-  // const events = data.allMarkdownRemark.nodes.filter(
-  //   (node) => node.frontmatter.templateKey === "community-event"
-  // );
   const projects = data.allMarkdownRemark.nodes.filter(
     (node) => node.frontmatter.templateKey === "featured-project"
   );
@@ -52,7 +49,7 @@ const CommunityPage = ({ data, location }) => {
 
       {posts.length > 0 && (
         <>
-          <h2>ml5 Blog</h2>
+          <h2>ml5 Development & Events</h2>
           <PostLayout location={location} title={siteTitle}>
             <div className="project-grid">
               {posts.map(post => (
@@ -84,8 +81,6 @@ const CommunityPage = ({ data, location }) => {
           <Spacer height="2rem" />
         </>
       )}
-
-
 
       <h2>Contribute!</h2>
       <p>
@@ -140,75 +135,14 @@ export const query = graphql`
           tags
           featured
           externalLink
-          image {
-            childImageSharp {
-              gatsbyImageData(placeholder: BLURRED),
-            }
-          }
-        }
-      }
-    }
-  }
-`;
-
-/*
-export const query = graphql`
-  query CommunityQuery {
-    allMarkdownRemark(
-      filter: {
-        frontmatter: {
-          templateKey: { in: ["featured-project"] }
-        }
-      }
-    ) {
-      nodes {
-        id
-        frontmatter {
-          templateKey
-          title
-          author
-          description
-          image {
-            childImageSharp {
-              gatsbyImageData(placeholder: BLURRED),
-            }
-          }
-          externalLink
-          tags
-          featured
-        }
-      }
-    }
-  }
-`;
-*/
-
-
-/*
-export const query = graphql`
-  query CommunityQuery {
-    allMarkdownRemark(
-      filter: {
-        frontmatter: {
-          templateKey: { in: ["community-event", "featured-project"] }
-        }
-      }
-    ) {
-      nodes {
-        id
-        frontmatter {
-          templateKey
-          title
-          author
-          description
-          image
-          externalLink
-          featuredPost
           date
-          tags
+          image {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED),
+            }
+          }
         }
       }
     }
   }
 `;
-*/
