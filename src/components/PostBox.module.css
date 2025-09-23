@@ -8,7 +8,7 @@
   max-width: var(--wrapper-maxWidth);
   height: auto;
   /* Adjust height based on content */
-  border-radius: var(--rounded-corner);
+  border-radius: var(--border-radius);
   padding: 1rem 0;
   text-decoration: none;
   /* Remove underline from Link */
@@ -28,7 +28,7 @@
   width: 120px;
   height: 120px;
   object-fit: cover;
-  border-radius: var(--rounded-corner);
+  border-radius: var(--border-radius);
   flex-shrink: 0;
   /* Prevents shrinking */
 }

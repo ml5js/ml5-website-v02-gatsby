@@ -45,6 +45,8 @@
 
   /* Rounded corners */
   --border-radius: 0.5rem;
+
+  --rounded-corner: 0.5rem;
 }
 
 html,
