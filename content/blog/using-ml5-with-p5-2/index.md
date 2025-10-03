@@ -22,7 +22,7 @@ In the past, we rely on `preload` function to do it:
 let data;
 
 function preload() {
-  data = loadJSON("./data.js");
+  data = loadJSON("data.json");
 }
 
 function setup() {
