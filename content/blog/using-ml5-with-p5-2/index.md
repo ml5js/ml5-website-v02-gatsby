@@ -36,7 +36,7 @@ Now say:
 let data;
 
 async function setup() {
-  data = await loadJSON("./data.js");
+  data = await loadJSON("data.json");
   drawData(data);
 }
 ```
