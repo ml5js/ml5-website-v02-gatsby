@@ -168,7 +168,7 @@ I duplicated all existing examples in the _examples_ folder and renamed them wit
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/p5@2.0.3/lib/p5.js"></script>
-<script src="https://unpkg.com/ml5@latest/dist/ml5.js"></script>
+<script src="https://unpkg.com/ml5@1/dist/ml5.js"></script>
 ```
 
 You can find all the examples in the [README.md](https://github.com/ml5js/ml5-next-gen/blob/main/examples/README.md) file inside the examples folder and explore them in the p5.js Web Editor.
