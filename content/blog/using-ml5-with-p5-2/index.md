@@ -14,7 +14,7 @@ featured: false
 
 In this summer, I mentored by Gottfried Haider and Daniel Shiffman to work on the [p5.js 2.0 compatibility issue](https://github.com/ml5js/ml5-next-gen/issues/244).
 
-A little bit background here: with the release of p5.js 2.0, asynchronous setup replaces preload for handling async operations. For example, let's say I want to load some JSON data in p5.js.
+A little bit background here: with the release of p5.js 2.0, asynchronous setup replaces preload and callbacks for handling async operations. For example, let's say I want to load some JSON data in p5.js.
 
 In the past, we rely on `preload` function to do it:
 
