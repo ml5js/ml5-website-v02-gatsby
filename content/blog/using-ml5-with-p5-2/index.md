@@ -12,7 +12,7 @@ tags:
 featured: false
 ---
 
-In this summer, I mentored by Gottfried Haider and Daniel Shiffman to work on the [p5.js 2.0 compatibility issue](https://github.com/ml5js/ml5-next-gen/issues/244).
+In this summer, I was mentored by Gottfried Haider and Daniel Shiffman to work on the [p5.js 2.0 compatibility issue](https://github.com/ml5js/ml5-next-gen/issues/244).
 
 A little bit background here: with the release of p5.js 2.0, asynchronous setup replaces preload and callbacks for handling async operations. For example, let's say I want to load some JSON data in p5.js.
 
@@ -30,7 +30,7 @@ function setup() {
 }
 ```
 
-Now say:
+Now, with p5.js 2.0, this gets turned into:
 
 ```js
 let data;
@@ -45,7 +45,7 @@ The code become mores concise and modern! To align with this update, ml5.js want
 
 ## Ideation
 
-Originally, ml5 model constructors return models themselves, which await all asynchronous operations implicitly in preload function:
+Originally, ml5 model constructors return models themselves, which await all asynchronous operations implicitly in the preload function:
 
 ```js
 let faceMesh;
@@ -70,7 +70,7 @@ async function setup() {
 }
 ```
 
-At first, this looks like a breaking change for me, since constructor signatures have changed. Actually, it is a breaking change for users without using p5.js:
+At first, this looks like a breaking change, since constructor signatures have changed. Actually, it is a breaking change for users without using p5.js:
 
 ```js
 // Before
@@ -78,18 +78,6 @@ const faceMesh = ml5.faceMesh(options);
 
 // After
 const faceMesh = await ml5.faceMesh(options);
-```
-
-So I even [proposed a compromise solution](https://github.com/ml5js/ml5-next-gen/issues/244#issuecomment-2977998767) for this, because we follow the sematic version and don't have a plan to release a major version:
-
-```js
-// with p5.js 2.0
-async function setup() {
-  faceMesh = await ml5.load(ml5.faceMesh(options));
-}
-
-// without p5.js
-const faceMesh = await ml5.load(ml5.faceMesh(options));
 ```
 
 But in fact we can ignore this breaking change, because we typically not do anything with the returned the object. All the following operations happen in the `callback` function:
@@ -123,41 +111,6 @@ setupP5Integration(ml5Library, withPreloadMethods, withoutAsyncMethods) {
 }
 ```
 
-`registerAsyncConstructor` is implemented like this:
-
-```js
-registerAsyncConstructors(ml5Library, withoutAsyncMethods) {
-  this.methodsToPreload.forEach((method) => {
-    if (withoutAsyncMethods.includes(method)) return;
-    ml5Library[method] = promisifyModel(ml5Library[method]);
-  });
-}
-```
-
-And here is code for `promisifyModel`:
-
-```js
-function promisifyModel(model) {
-  return (...args) => {
-    const result = model(...args);
-    if (result.ready) return result.ready.then(() => result);
-    return Promise.resolve(result);
-  };
-}
-```
-
-Another important part is to handle different p5 versions:
-
-```js
-// checkP5 returns true only with p5 1.x, because p5 2.x does not have registerMethod method,
-// which is checked in isP5Constructor function.
-if (this.checkP5()) {
-  this.registerPreloads();
-} else {
-  this.registerAsyncConstructors(ml5Library, withoutAsyncMethods);
-}
-```
-
 For more details, please refer to the pull request: [ml5js/ml5-next-gen#258](https://github.com/ml5js/ml5-next-gen/pull/258).
 
 ## Examples for p5.js 2.0
@@ -173,7 +126,7 @@ I duplicated all existing examples in the _examples_ folder and renamed them wit
 
 You can find all the examples in the [README.md](https://github.com/ml5js/ml5-next-gen/blob/main/examples/README.md) file inside the examples folder and explore them in the p5.js Web Editor.
 
-A interesting thing is that I also wrote a script called `updateExamplesREADME` to generate this README from all the examples.
+An interesting thing is that I also wrote a script called `updateExamplesREADME` to generate this README from all the examples.
 
 ```bash
 yarn update-examples-readme
@@ -220,7 +173,7 @@ I also ran the script and updated the p5 1.x version used in the examples.
 
 ## Fix a Bug for p5.js
 
-During the upgrading, I also found a bug for p5.s 2.0. Nearly all examples work as expected. However, examples involving video.**mask** do not work correctly in p5.js 2.0:
+During the upgrading, I also found a bug for p5.js 2.0. Nearly all examples work as expected. However, examples involving video.**mask** do not work correctly in p5.js 2.0:
 
 - examples/bodySegmentation-mask-background-p5-2.0
 - examples/bodySegmentation-mask-person-p5-2.0
