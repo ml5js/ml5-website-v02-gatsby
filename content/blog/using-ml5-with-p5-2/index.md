@@ -252,3 +252,6 @@ You can find more details and technical discussions in the following links:
 - Pull Request: [Async constructors for p5 2.0](https://github.com/ml5js/ml5-next-gen/pull/258)
 
 These thread go deeper into reasoning, implementation details and ongoing conversations around p5.js 2.0 compatibility.
+
+---
+<span style="color: gray;">[Bairui SU](https://bairui.dev) is a toolmaker who is interested in creative coding, data visulization and interactive system. He is part of ml5's research team as a graduate student at NYU ITP.</span>
