@@ -45,26 +45,20 @@ const CommunityPage = ({ data, location }) => {
         broadly. Special emphasis is given to projects that highlight ethical
         and critical engagement with technology and/or are simply delightful.
       </p>
+                              <Button
+            children="Submit Your Project!"
+            url="https://forms.gle/5EpwYabG8hLn4p926"
+            target="_blank"
+            fontSize="1.1rem"
+            borderStyle="solid"
+            padding="0.5rem 1.0rem"
+            margin="1.5rem 0"
+          />
       <Spacer height="2rem" />
-
-      {posts.length > 0 && (
-        <>
-          <h2>ml5 Development & Events</h2>
-          <PostLayout location={location} title={siteTitle}>
-            <div className="project-grid">
-              {posts.map(post => (
-                <PostBox key={post.fields.slug} post={post} />
-              ))}
-            </div>
-            {/* <Bio /> */}
-          </PostLayout>
-          <Spacer height="2rem" />
-        </>
-      )}
 
       {projects.length > 0 && (
         <>
-          <h2>Featured Projects</h2>
+          <h2>Featured Projects </h2> 
           <div style={styles.postContainer}>
             {projects.map((project) => (
               <ProjectBox
@@ -77,7 +71,22 @@ const CommunityPage = ({ data, location }) => {
                 tags={project.frontmatter.tags}
               />
             ))}
-          </div>
+          </div>  
+          <Spacer height="2rem" />
+        </>
+      )}
+
+      {posts.length > 0 && (
+        <>
+          <h2>Blog & Changelog</h2>
+          <PostLayout location={location} title={siteTitle}>
+            <div className="project-grid">
+              {posts.map(post => (
+                <PostBox key={post.fields.slug} post={post} />
+              ))}
+            </div>
+            {/* <Bio /> */}
+          </PostLayout>
           <Spacer height="2rem" />
         </>
       )}
