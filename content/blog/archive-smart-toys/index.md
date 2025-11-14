@@ -2,7 +2,7 @@
 templateKey: blog-post # <-- Uncomment this so that this post can be included in the blog list
 title: The Hard Fun of Designing Alternatives to Smart Toys
 author: ml5.js Archive
-description: An introduction to ml5.js written in 2018
+description: A conversation with Stefania Druga
 keywords: archive
 image: "./images/_thumb.jpg"
 externalLink: (link)
