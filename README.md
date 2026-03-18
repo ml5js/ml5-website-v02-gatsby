@@ -2,7 +2,7 @@
 
 This is the repository for the new version of ml5.js website, which is built using [Gatsby](https://www.gatsbyjs.org/). It contains the main homepage, community page, about page, blog, and learn page for the ml5.js library.
 
-> This is a work-in-progress repository under active development.
+> This is the current version of the ml5.js website.
 
 
 ## Live Site
@@ -14,17 +14,59 @@ This is the repository for the new version of ml5.js website, which is built usi
 - [Gatsby 5](https://www.gatsbyjs.org/) — static site generator
 - [React 18](https://reactjs.org/) — UI components
 - [Node.js](https://nodejs.org/) — runtime environment
+- [gatsby-transformer-remark](https://www.gatsbyjs.com/plugins/gatsby-transformer-remark/) — Markdown processing
+- [gatsby-plugin-image](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/) — optimized image handling
 
-## Installation and Testing
 
-You can simply clone the repository and run the website locally.
+## Project Structure
+
+```
+ml5-website-v02-gatsby/
+├── content/                  # Markdown content
+│   ├── blog/                 # Blog posts
+│   ├── featured-projects/    # Featured community projects
+│   └── tutorials/            # Tutorial pages
+├── src/
+│   ├── assets/               # Static assets (fonts, icons, etc.)
+│   ├── components/           # Reusable React components
+│   ├── images/               # Image files used in source
+│   ├── layout/               # Layout wrapper components
+│   ├── pages/                # Top-level pages (index, about, etc.)
+│   ├── styles/               # Global and component CSS
+│   └── templates/            # Gatsby page templates (blog, tutorial)
+├── static/                   # Public static files
+├── gatsby-config.js          # Gatsby plugins and site metadata
+├── gatsby-node.js            # Dynamic page creation logic
+├── gatsby-browser.js         # Browser-specific Gatsby APIs
+└── gatsby-ssr.js             # Server-side rendering Gatsby APIs
+```
+
+## Local Setup
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- [Node.js](https://nodejs.org/) v18 or v20 LTS 
 - [npm](https://www.npmjs.com/)
-- [Gatsby CLI](https://www.gatsbyjs.com/docs/reference/gatsby-cli/)
-  - Unless you are already familiar with an alternative local development setup.
+
+### Steps
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ml5js/ml5-website-v02-gatsby.git
+   cd ml5-website-v02-gatsby
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run develop
+   ```
+
+4. Open [http://localhost:8000](http://localhost:8000) in your browser.
 
 ## Contributing
 
