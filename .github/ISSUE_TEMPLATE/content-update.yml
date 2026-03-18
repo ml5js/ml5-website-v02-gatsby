@@ -1,0 +1,44 @@
+name: Content Update
+description: Propose content improvements for the ml5js.org website.
+labels: ["content"]
+projects: []
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: dropdown
+    id: type
+    attributes:
+      label: Update Type
+      multiple: true
+      options:
+        - Page Content
+        - Blog Post
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link to the page
+      description: Which page needs updating?
+      placeholder: https://ml5js.org/...
+    validations:
+      required: false
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      placeholder: Tell us what changes you would like to see on the website!
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/ml5js/Code-of-Conduct). 
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
